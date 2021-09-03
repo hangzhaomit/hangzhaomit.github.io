@@ -1,0 +1,650 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Predictive Visual Tracking</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(0, 0, 0) !important;
+      opacity: 1 !important;
+      font-weight: 800 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Intro-->
+        <div class="flex-row">
+          <div class="flex-item text-center">
+            <h1><font size="8">Predictive Visual Tracking</font></h1>
+            <h2><font size="6">A New Benchmark and Baseline Approach</font></h2>
+            <p class="text-large">
+              <a target="_blank" href="https://scholar.google.com/citations?user=XjZjcakAAAAJ&hl=en">Bowen Li<sup>1*</sup></a>, 
+              <a target="_blank" href="https://scholar.google.com/citations?user=i_aajNoAAAAJ&hl=en">Yiming Li<sup>2*</sup></a>,
+              <a target="_blank" href="https://scholar.google.com/citations?user=uy-TfXgAAAAJ&hl=en">Junjie Ye<sup>1</sup></a>,
+              <a target="_blank" href="https://scholar.google.com/citations?user=zmbMZ4kAAAAJ&hl=en">Changhong Fu<sup>1</sup></a>,
+              <a target="_blank" href="https://scholar.google.com/citations?user=DmahiOYAAAAJ&hl=en">Hang Zhao<sup>3</sup></a>
+            </p>
+            <p class="text-large">
+              <sup>1</sup>School of Mechanical Engineering, Tongji University
+            </p>
+            <p class="text-large">
+              <sup>2</sup>Tandon School of Engineering, New York University
+            </p>
+            <p class="text-large">
+              <sup>3</sup>Institute of Interdisciplinary Information Sciences, Tsinghua University
+            </p>
+            <img class="image" src="img/exhibition.png">
+          </div>
+        </div>
+        <!--End Intro-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text Only-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Abstract</h2>
+            <hr>
+            <p class="text">
+              As a crucial robotic perception capability, visual tracking has been intensively studied recently. In the real-world scenarios, the onboard processing time of the image streams inevitably leads to a discrepancy between the tracking results and the real-world states. However, existing visual tracking benchmarks commonly run the trackers offline and ignore such latency in the evaluation. In this work, we aim to deal with a more realistic problem of latency-aware tracking. The state-of-the-art trackers are evaluated in the aerial scenarios with new metrics jointly assessing the tracking accuracy and efficiency. Moreover, a new predictive visual tracking baseline is developed to compensate for the latency stemming from the onboard computation. Our latency-aware benchmark can provide a more realistic evaluation of the trackers for the robotic applications. Besides, exhaustive experiments have proven the effectiveness of the proposed predictive visual tracking baseline approach.
+            </p>
+        </div>
+        <!--End Text Only-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Buttons-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Examples of Tracking with Latency</h2>
+            <hr>
+            <div class="flex-row-space-between">
+              <video preload controls autoplay loop muted playsinline class="image max-width-400">
+                <source src="vid/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video preload controls autoplay loop muted playsinline class="image max-width-400">
+                <source src="vid/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video preload controls autoplay loop muted playsinline class="image max-width-400">
+                <source src="vid/3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video preload controls autoplay loop muted playsinline class="image max-width-400">
+                <source src="vid/4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p class="image-caption">Visualization of representative latency-aware tracking scenes. The <font color="red">red</font> boxes denotes bare tracker (dashed line) and proposed predictive tracker (solid line). The <font color="green">green</font> boxes indicates ground truth.</p>
+          </div>
+        </div>
+        <!--End Text with Buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Images and Image buttons-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Results Comparison</h2>
+            <hr>
+            <div class="flex-item flex-column">
+              <img class="image" src="img/overall.png">
+              <p class="image-caption">Performance of state-of-the-art trackers on the proposed LAE benchmark. The curves in solid colors report the performance of the 8 benchmarked trackers on LAE, whereas the dotted curves overlaid in semi-transparent same colors outline the performance obtained by the same trackers on the traditional offline benchmark. In brackets, we report the distance precision (DP) and area under curve (AUC) on LAE (in black) and on offline benchmark (in gray). Clearly, many offline promising trackers fail to maintain their robustness and accuracy in LAE benchmark.</p>
+            </div>
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Predictive Visual Tracking Baseline</h2>
+            <hr>
+            <p class="text">
+              <img class="image image-wrap-text max-width-400" src="img/PVT.png">
+              Performance of the state-of-the-art trackers with offline latency-free and online latency-aware benchmarks on DTB70. The distance precision (DP) is employed for evaluation. The same shape indicates the same tracker, i.e., star for SiamRPN++ with ResNet50 as backbone. <font color="blue">Blue</font> denotes the results on the offline benchmark. <font color="red">Red</font> means the results on the latency-aware benchmark. Our predictive tracking baseline is marked out by red circles, where the original performance is improved by a considerable margin, denoted by <font color="green">Green</font> arrows and percentages.
+            </p>
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Reference</h2>
+            <hr>
+            <pre>
+              @misc{li2021predictive,
+              title={Predictive Visual Tracking: A New Benchmark and Baseline Approach}, 
+              author={Bowen Li and Yiming Li and Junjie Ye and Changhong Fu and Hang Zhao},
+              year={2021},
+              eprint={2103.04508},
+              archivePrefix={arXiv},
+              primaryClass={cs.CV} } 
+            </pre>
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Downloads</h2>
+            <hr>
+              <a
+                 target="_blank" href="https://arxiv.org/abs/2103.04508" >
+                 <img class="image" src="img/paper.png">
+              </a>
+              <div class="control-group ">
+                <a
+                 target="_self" href="https://arxiv.org/pdf/2103.04508">
+                  <button class="custom-button-flat pulse-primary"><img src="img/book.png"><span>Paper</span></button>
+                </a>
+
+                <a
+                 target="_blank" href="https://github.com/vision4robotics/LAE-PVT-master" >
+                  <button class="custom-button-flat pulse-primary"><img src="img/github.png"><span>Code</span></button>
+                </a>
+              </div> 
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column ">
+            <h2 class="add-top-margin">Acknowledgements</h2>
+            <hr>
+              <p class="text">
+                We thank the contribution of SenseTime and Martin Danelljan et al. for their brilliant tracking libraries Pysot and Pytracking sincerely. We would also like to extend our gratitude to Martin Li et al., who firstly proposed the latency issue in perception tasks and inspired us.
+              </p>
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+
+        <!--End Text around Image-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Centered Image and Table-->
+        <!------>
+    <!---
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Centered Image and Table</h2>
+            <hr>
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+            <p class="text text-center graph-title">
+              This is the title for the bottom image
+            </p>
+            <img class="image center max-width-400 add-top-margin-small" src="img/dummay-img.png">
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+            <p class="text text-center graph-title">
+              This is the title for the bottom table
+            </p>
+            <div class="custom-table-container center add-top-margin-small">
+              <table class="custom-table">
+                <thead>
+                  <tr class="bg-color-gray">
+                    <th>Number of</th>
+                    <th class="text-center">Unique Users</th>
+                    <th class="text-center">Smell Reports</th>
+                    <th class="text-center">Interaction Events</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Enthusiasts</td>
+                    <td class="text-center">9.4%</td>
+                    <td class="text-center">50.6%</td>
+                    <td class="text-center">44.8%</td>
+                  </tr>
+                  <tr class="bg-color-light-gray">
+                    <td>Explorers</td>
+                    <td class="text-center">36.1%</td>
+                    <td class="text-center">37.3%</td>
+                    <td class="text-center">27.3%</td>
+                  </tr>
+                  <tr>
+                    <td>Contributors</td>
+                    <td class="text-center">13.0%</td>
+                    <td class="text-center">12.1%</td>
+                    <td class="text-center">n/a</td>
+                  </tr>
+                  <tr class="bg-color-light-gray">
+                    <td>Observers</td>
+                    <td class="text-center">41.6%</td>
+                    <td class="text-center">n/a</td>
+                    <td class="text-center">27.9%</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Size (N)</td>
+                    <td class="text-center">2,237</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">79,447</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p class="text text-center graph-title">
+              This is the title for the bottom very long scrollable table
+            </p>
+            <div class="custom-table-container center add-top-margin-small">
+              <table class="custom-table">
+                <thead>
+                  <tr class="bg-color-gray">
+                    <th class="text-center">Smell Rating</th>
+                    <th class="text-center">2019</th>
+                    <th class="text-center">2018</th>
+                    <th class="text-center">2017</th>
+                    <th class="text-center">2016</th>
+                    <th class="text-center">2015</th>
+                    <th class="text-center">2014</th>
+                    <th class="text-center">2013</th>
+                    <th class="text-center">2012</th>
+                    <th class="text-center">2011</th>
+                    <th class="text-center">2010</th>
+                    <th class="text-center">2009</th>
+                    <th class="text-center">2008</th>
+                    <th class="text-center">2007</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center">1,711 (9.5%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                    <td class="text-center">1,199 (13.0%)</td>
+                    <td class="text-center">1,658 (20.4%)</td>
+                  </tr>
+                  <tr class="bg-color-light-gray">
+                    <td class="text-center">2</td>
+                    <td class="text-center">798 (4.4%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                    <td class="text-center">497 (5.4%)</td>
+                    <td class="text-center">665 (8.2%)</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td class="text-center">4,305 (23.9%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                    <td class="text-center">2,649 (28.8%)</td>
+                    <td class="text-center">2,246 (27.7%)</td>
+                  </tr>
+                  <tr class="bg-color-light-gray">
+                    <td class="text-center">4</td>
+                    <td class="text-center">5,804 (32.3%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                    <td class="text-center">2,932 (31.9%)</td>
+                    <td class="text-center">2,171 (26.8%)</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td class="text-center">5,356 (29.8%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                    <td class="text-center">1,918 (20.9%)</td>
+                    <td class="text-center">1,372 (16.9%)</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td class="text-center">Sum</td>
+                    <td class="text-center">17,974</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                    <td class="text-center">9,195</td>
+                    <td class="text-center">8,112</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+          </div>
+        </div>
+      -->
+        <!--End Text with Centered Image and Table-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Adaptive Image
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Adaptive Image</h2>
+            <hr>
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+            <a class="image adaptive-image" style="background-image: url('img/dummay-img-long.png'); min-height: 150px;" href="img/dummay-img-long.png" target="_blank"></a>
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+          </div>
+        </div>
+        -->
+        <!--End Text with Adaptive Image-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Images and Videos
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Text with Images and Videos</h2>
+            <hr>
+            <p class="text">
+              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
+              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
+              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
+              simplificat Angles, quam un skeptic Cambridge amico dit me.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image" src="img/dummay-img.png">
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+              magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <video preload controls autoplay loop muted playsinline class="image">
+              <source src="vid/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+              magnam.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text">
+              Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del
+              coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.
+              It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un
+              simplificat Angles, quam un skeptic Cambridge amico dit me.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch-2 flex-column">
+            <p class="text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+            </p>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image" src="img/dummay-img.png">
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch-2 flex-column">
+            <p class="text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+              dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+              sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.
+            </p>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <video preload controls autoplay loop muted playsinline class="image">
+              <source src="vid/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text">
+              Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
+              sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e
+              li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar
+              custosi traductores. At solmen va esser.
+            </p>
+          </div>
+        </div>
+        -->
+        <!--End Text with Images and Videos-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Iframe
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Iframe</h2>
+            <hr>
+            <p class="text">
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+              vel, luctus pulvinar, hendrerit id, lorem.
+            </p>
+            <iframe class="iframe-in-body" src="http://yenchiah.me/geo-heatmap/smell.html"></iframe>
+            <p class="text">
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+              vel, luctus pulvinar, hendrerit id, lorem.
+            </p>
+          </div>
+        </div>
+        -->
+        <!--END Text with Iframe-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Gallery
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin">Text with Gallery (Responsive Size)</h2>
+            <hr>
+            <p class="text">
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+              vel, luctus pulvinar, hendrerit id, lorem.
+            </p>
+          </div>
+        </div>
+        <div class="gallery">
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+          <a href="javascript:void(0)" class="flex-column"><img src="img/dummay-img.png">
+            <div>Image Caption</div>
+          </a>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text">
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+              vel, luctus pulvinar, hendrerit id, lorem.
+            </p>
+          </div>
+        </div>
+        -->
+        <!--End Text with Gallery-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start List of Projects
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">List of Projects</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image max-width-400" src="img/dummay-img.png">
+          </div>
+          <div class="flex-item flex-item-stretch-4 flex-column">
+            <p class="text">
+              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image max-width-400" src="img/dummay-img.png">
+          </div>
+          <div class="flex-item flex-item-stretch-4 flex-column">
+            <p class="text">
+              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image max-width-400" src="img/dummay-img.png">
+          </div>
+          <div class="flex-item flex-item-stretch-4 flex-column">
+            <p class="text">
+              <a class="highlight-text" href="javascript:void(0)">Li Europan Lingues es Membres Del Sam Familie</a><br>
+              Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
+              augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+              condimentum rhoncus, sem quam semper libero, sit amet.
+            </p>
+          </div>
+        </div>
+        -->
+        <!--End List of Projects-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Credits
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text text-small text-italic">
+              Credits: <span class="highlight-text">Organization One</span>: Author One and Author Two / <span class="highlight-text">Organization Two</span>: Author Three and Author Four
+            </p>
+          </div>
+        </div>
+        -->
+        <!--End Credits-->
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

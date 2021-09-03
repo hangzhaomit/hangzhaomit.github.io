@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Hang Zhao, hangzhao@mit.edu">
+
+    <!-- Include bootstrap CSS -->
+    <link href="includes/bootstrap/css/bootstrap-Hang.css" rel="stylesheet">
+    <link href="includes/twentytwenty/css/twentytwenty.css" rel="stylesheet" type="text/css" />
+
+    <title>Unbounded High Dynamic Range Photography using a Modulo Camera - Hang Zhao - MIT Media Lab</title>
+</head>
+
+<body>
+<!-- Include jQuery and bootstrap JS plugins -->
+<script src="includes/jquery/jquery-2.1.3.min.js"></script>
+<script src="includes/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60734989-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="includes/twentytwenty/js/jquery.event.move.js"></script>
+<script src="includes/twentytwenty/js/jquery.twentytwenty.js"></script>
+<script>
+$(window).load(function(){
+  $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+  $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+});
+</script>
+
+<!-- Site header and navigation -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand pull-left">HOME</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <nav class="navbar-collapse collapse" role="navigation">
+            <ul class="navbar-nav nav">
+            	<li><a href="index.html#project">PROJECTS</a></li>
+            	<li><a href="index.html#publication">PUBLICATIONS</a></li>
+                <li><a href="#resource">RESOURCES</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+   <div class="container">
+    <div class="page-header" style="margin-top: 50px;">
+      <a href="http://media.mit.edu"> <img src="images/MIT_ML_Logo.png" height="100" /> </a>
+      <a href="http://cameraculture.media.mit.edu"> <img src="images/CC_Logo.png" height="100" /> </a>
+    </div>
+
+    <div class="container">
+          <h2 align="center" > <strong> Unbounded High Dynamic Range Photography using a Modulo Camera</strong> </h2>
+
+            <p align="center">
+              <a href="http://www.media.mit.edu/~hangzhao/">Hang Zhao</a><sup>1</sup> &nbsp;
+              <a href="http://web.media.mit.edu/~shiboxin/">Boxin Shi</a><sup>1,3</sup> &nbsp;  
+              <a href=#>Christy Fernandez-Cull</a><sup>2</sup> &nbsp;
+              <a href="http://people.sutd.edu.sg/~saikit/">Sai-Kit Yeung</a><sup>3</sup> &nbsp;
+              <a href="http://web.media.mit.edu/~raskar/">Ramesh Raskar</a><sup>1</sup> &nbsp;
+            </p>
+
+          <p align="center"><sup>1</sup> <span lang="EN-US"><a href="http://media.mit.edu">MIT Media Lab</a></SPAN> &nbsp;&nbsp;
+          <SUP>2</SUP><a href="http://www.ll.mit.edu">MIT Lincoln Lab</a></span> &nbsp;&nbsp;
+          <SUP>3</SUP><a href="http://sutd.edu.sg">SUTD</a></span> &nbsp;&nbsp;
+          </p>
+          <p align="center">
+          <a href="http://iccp.rice.edu">ICCP 2015, Houston, TX </a> &nbsp; 
+          <strong> <a href="images/ICCP2015Award.jpg"> [Best Paper runner-up]</a></SPAN> &nbsp;&nbsp; </strong>
+          </p>
+
+        </div>
+
+        <div class="row" style="text-align: center;">
+            <img src="images/modulo_teaser.png" style="max-width: 90%">
+        </div>
+
+        <a name="abstract" style="visibility: hidden;"></a>
+        <h3>Abstract</h3>
+        <div class="container">
+            This paper presents a novel framework to extend the dynamic range of images called Unbounded High Dynamic Range (UHDR) photography with a modulo camera. A modulo camera could theoretically take unbounded radiance levels by keeping only the least significant bits. We show that with limited bit depth, very high radiance levels can be recovered from a single modulus image with our newly proposed unwrapping algorithm for natural images. We can also obtain an HDR image with details equally well preserved for all radiance levels by merging the least number of modulus images. Synthetic experiment and experiment with a real modulo camera show the effectiveness of the proposed approach.
+        </div>
+
+        <h3>Keywords</h3>
+        <div class="container">
+            <li>High Dynamic Range (HDR) Imaging</li>
+            <li>Modulo Camera</li>
+        </div>
+
+        <h3>Video</h3>
+        <div class="container">
+            <div class="row" style="text-align: center;">
+
+              <video width="854" height="480" controls>
+                <source src="videos/ICCP15_audio.mp4" type="video/mp4">
+              </video>
+            </div>
+
+        <h3>Demo</h3>
+        <div class="container">
+          <div class="col-xs-12 col-md-5" >
+            <div class="twentytwenty-container auto">
+              <img src="images/modulo1.png" height="300" />
+              <img src="images/recovered1.png" height="300"/>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-5">
+            <div class="twentytwenty-container auto">
+              <img src="images/modulo2.png" height="300"/>
+              <img src="images/recovered2.png" height="300"/>
+            </div>
+          </div>
+        </div>
+
+        <h3>Files</h3>
+          <div class="container">
+            <li>Technical Paper: [<a href="papers/moduloUHDR.pdf">PDF</a>]</li>
+            <li>Poster: [<a href="posters/ICCP15_Poster.pdf">PDF</a>]</li>
+
+            <div class="col-md-6">
+              <img src="papers/moduloUHDR.png" height="350" align="right">
+              </div>
+              <div class="col-md-3">
+              <img src="posters/ICCP15_Poster.png" height="340" align="right">
+              </div>
+          </div>
+        </div>
+
+        <a name="news" style="visibility: hidden;"></a>
+        
+        <h3>In the News</h3>
+        <div class="container">
+  
+            English: <a href="http://www.media.mit.edu/research/highlights/unbounded-high-dynamic-range-photography-using-modulo-camera"> [MIT Media Lab]: A Camera that Never Saturates </a> <a href="images/modulo_ML_cover.png">(<strong>Featured on Homepage!</strong>)</a> <br /><br />
+            <span style="padding-left:60px"><a href="http://www.nbcnews.com/tech/innovation/no-more-overexposed-photos-mit-camera-never-blows-out-n412746"> [NBC News]: No More Overexposed Photos: MIT 'Modulo' Camera Never Blows Out</a><br /><br />
+            <span style="padding-left:60px"><a href="http://www.betaboston.com/news/2015/08/18/a-camera-that-cant-be-overexposed-mit-team-says-its-possible/"> [The Boston Globe]: A camera that can’t be overexposed? MIT team says it’s possible</a><br /><br />
+            <span style="padding-left:60px"><a href="http://spie.org/x116146.xml"> [SPIE Newsroom]: A camera that never overexposes an image </a><br /><br />
+            <span style="padding-left:60px"><a href="http://www.dpreview.com/articles/5923827506/mit-proposes-new-approach-to-hdr-with-modulo-camera"> [DP Review]:MIT proposes new approach to HDR with 'Modulo' camera </a><br /><br />
+            <span style="padding-left:60px"><a href="http://slice.mit.edu/2015/08/20/modulo-camera-rescues-overexposed-images/"> [Slice of MIT]: Modulo Camera Rescues Overexposed Images</a><br /><br />
+            <span style="padding-left:60px"><a href="http://petapixel.com/2015/08/18/mit-created-a-camera-that-will-never-overexpose-a-photograph/"> [PetaPixel]: MIT Created a Camera That Will Never Overexpose a Photograph </a><br /><br />
+            <span style="padding-left:60px"><a href="http://www.imaging-resource.com/news/2015/08/18/mit-researchers-have-developed-a-camera-that-will-never-over-expose-an-imag"> [Imaging Resource]: MIT researchers have developed a camera that will never overexpose an image</a><br /><br />
+            <span style="padding-left:60px"><a href="http://techreport.com/news/28854/mit-researchers-build-an-overexposure-proof-hdr-camera"> [The Tech Report]: MIT researchers build an overexposure-proof HDR camera </a><br /><br />
+            <span style="padding-left:60px"><a href="http://camyx.com/news/2015/08/mit-modulo-camera-hdr-photos/"> [Camyx]: MIT’s Modulo Camera will never capture overexposed photos </a><br /><br />
+            <span style="padding-left:60px"><a href="http://www.slrlounge.com/mit-boffins-made-camera-will-never-overexpose-image/"> [SLR Lounge]: MIT boffins have made a camera that will never overexpose an image</a><br /><br />
+            <span style="padding-left:60px"><a href="http://www.gizmag.com/mit-modulo-camera-uhdr-overexposed/39064/"> [GizMag]: Photos with overexposed highlights could one day be a thing of the past</a><br /><br />
+            <span style="padding-left:60px"><a href="http://gadgets.ndtv.com/cameras/news/mit-develops-real-time-hdr-camera-algorithm-to-prevent-overexposure-731675/"> [NDTV]: MIT Develops Real-Time HDR Camera, Algorithm to Prevent Overexposure</a><br /><br />
+            <span style="padding-left:60px"><a href="http://techreport.com/news/28854/mit-researchers-build-an-overexposure-proof-hdr-camera"> [TechReport]: MIT researchers build an overexposure-proof HDR camera</a><br /><br />
+            <span style="padding-left:60px"><a href="http://news.softpedia.com/news/mit-researchers-develop-a-camera-that-never-overexposes-images-489829.shtml"> [SoftPedia]: MIT Researchers Develop a Camera That Never Overexposes Images</a><br /><br />
+
+            中文：<a href="http://mp.weixin.qq.com/s?__biz=MzA3NTIyODUzNA==&mid=208487476&idx=1&sn=555c3f0ca4a4c5a2c74bb018b37e55c1"> [麻省理工科技评论]: 新兴技术:不会过曝的相机 </a> <a href="images/modulo_TR.png">(图文)</a><br /><br />
+            <span style="padding-left:55px"><a href="http://tech.qq.com/a/20150822/033021.htm"> [腾讯]: 解决过曝，麻省理工学院成功实现单张照片HDR</a><br /><br />
+            <span style="padding-left:55px"><a href="http://dcdv.zol.com.cn/536/5362873.html"> [中关村在线]: 解决过曝难题 MIT实验室开发余数相机</a><br /><br />
+            More: 
+            <a href="http://timesofindia.indiatimes.com/nri/citizen-journalists/citizen-journalists-reports/ishaan-bhojwani/MIT-team-led-by-Indian-born-scientist-creates-no-overexposure-camera/articleshow/48282692.cms"> [Times of India] </a>
+            <a href="https://www.ephotozine.com/article/mit-develops-camera-that-won-t-overexpose-an-image-27987"> [ePHOTOzine] </a>
+            <a href="http://www.picturecorrect.com/tips/a-camera-that-never-overexposes-photos/"> [PictureCorrect] </a>
+            <br /> <br /> <span style="padding-left:45px">
+            <a href="http://mt.sohu.com/20150820/n419287298.shtml"> [搜狐]</a>
+            <a href="http://digi.163.com/15/0821/12/B1HSB0JU001624JO.html"> [网易]</a>
+            <a href="http://yd.sina.cn/article/detail-ifxhupik6699347.d.html"> [新浪]</a>
+            <a href="http://cn.engadget.com/2015/08/20/modulo-camera-uhdr/"> [engadget中国] </a>
+            <a href="http://digi.ifeng.com/a/20150820/41437846_0.shtml"> [凤凰]</a>
+            <a href="http://zhuanlan.zhihu.com/mittechreview/20113901"> [知乎专栏] </a>
+            <a href="http://tech.huanqiu.com/news/2015-08/7329642.html"> [环球网] </a>
+            <a href="http://toutiao.com/a4720863623/"> [今日头条] </a>
+            <a href="http://www.camerabeta.com/rumor/other/mit-develops-unbounded-high-dynamic-range-photography-using-a-modulo-camera/955"> [相机Beta]</a>
+
+            <br /> <br /> <span style="padding-left:45px">
+            <a href="http://www.pcpop.com/doc/1/1122/1122780.shtml"> [泡泡网]</a>
+            <a href="http://www.nphoto.net/news/2015-08/21/2cd0e05e44d2570a.shtml"> [新摄影]</a>
+            <a href="http://www.artsbj.com/show-22-498465-1.html"> [ArtsBj]</a>
+            <a href="http://dc.it168.com/a2015/0820/1755/000001755824.shtml"> [IT168]</a>
+            <a href="http://www.unpcn.com/NewsFiles/150825/20153525113547.shtml"> [国家摄影]</a>
+            <a href="http://www.7192.com/2015/0822/102455.shtml"> [全影网]</a>
+            <a href="http://www.21ic.com/chongdian/science/2015-08-21/638741.html"> [21ic]</a>
+            
+            <br /> <br /> <span style="padding-left:45px">
+            <a href="https://www.tinhte.vn/threads/modulo-camera-may-anh-chup-khong-bao-gio-bi-chay-hinh.2498582/"> [Tinhte.vn]</a>
+            <a href="http://www.heise.de/foto/meldung/MIT-Modulo-Camera-Unbegrenzter-Dynamikumfang-HDR-mit-einer-Aufnahme-2788108.html"> [Heise.de]</a>
+            <a href="http://www.want.nl/modulo-camera-zorgt-er-voor-dat-je-nooit-meer-overbelichte-fotos-maakt/"> [Want.nl] </a>
+            <a href="http://www.digifotopro.nl/content/nooit-meer-overbelichte-fotos-met-modulo-camera"> [DigiFotoPro.nl] </a>
+            <a href="http://www.xataka.com/fotografia-y-video/el-mit-crea-la-modulo-camera-una-tecnologia-que-promete-imagenes-hdr-perfectas-en-una-toma"> [Xataka] </a>
+            <a href="http://www.fotozona.it/magazine/modulo-camera-hdr-47651"> [FotoZona.it] </a>
+            
+
+        </div>
+
+        <h3>Awards</h3>
+        <div class="container">
+            <img src="images/ICCP2015Award.jpg" style="max-width: 30%">
+        </div>
+
+        <h3>Bibtex</h3>
+        <div class="container">
+          <pre style="font-size:16px; font-style: normal; font-weight: normal; letter-spacing: normal">@inproceedings{ICCP15_Zhao,<br>  author = "Hang Zhao and Boxin Shi and Christy Fernandez-Cull and Sai-Kit Yeung and Ramesh Raskar,<br>  title = "Unbounded High Dynamic Range Photography using a Modulo Camera",<br>  booktitle = "International Conference on Computational Photography (ICCP)",<br>  year = "2015"<br>}</pre>
+        </div>
+        
+        <h3>Acknowledgments</h3>
+            <div class="container">
+            We would like to acknowledge Brian Tyrrell, Thomas Gardner, Julio Estrada, Amit Agrawal and Zhen Xie for their valuable insights and help.
+            </div>
+
+        <footer>
+            <div class="container" >
+                <ul class="list-unstyled">
+                    <li class="pull-right"><a href="#top">Back to top</a></li>
+                </ul>
+            </div>
+            <div style="text-align: center">
+                <span>©
+                    <script>document.write(new Date().getFullYear())</script>
+                    Hang Zhao 
+                </span>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>
