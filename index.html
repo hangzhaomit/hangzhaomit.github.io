@@ -4,18 +4,55 @@
     <meta charset="utf-8" />
     <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Hang Zhao - Assistant Professor at IIIS, Tsinghua University, PI of MARS Lab, co-founder of Galaxea. Research on multi-modal machine learning, autonomous driving, and robot learning."
+    />
     <meta name="author" content="Hang Zhao, hangzhao (at) mit.edu" />
 
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hang Zhao" />
+    <meta
+      property="og:description"
+      content="Assistant Professor at IIIS, Tsinghua University. Multi-modal machine learning, autonomous driving, and robot learning."
+    />
+    <meta property="og:url" content="https://hangzhaomit.github.io/" />
+    <meta
+      property="og:image"
+      content="https://hangzhaomit.github.io/images/profile3.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
     <title>Hang Zhao</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Include bootstrap CSS -->
     <link href="includes/bootstrap/css/bootstrap-Hang.css" rel="stylesheet" />
+    <!-- Site-specific styles (kept separate from vendor CSS) -->
+    <link href="includes/custom.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!-- Include jQuery and bootstrap JS plugins -->
-    <script src="includes/jquery/jquery-2.1.3.min.js"></script>
-    <script src="includes/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Navbar collapse toggle (replaces jQuery + bootstrap.js) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggle = document.querySelector(".navbar-toggle");
+        var target = document.querySelector(".navbar-collapse");
+        if (toggle && target) {
+          toggle.addEventListener("click", function () {
+            target.classList.toggle("in");
+          });
+        }
+      });
+    </script>
 
     <!-- Site header and navigation -->
     <div class="navbar navbar-default navbar-fixed-top">
@@ -37,90 +74,83 @@
       </div>
     </div>
 
-    <div class="jumbotron">
-      <div
-        class="col-xs-12 col-md-12"
-        style="margin-top: 225px; margin-left: 10%"
-      >
-        <p>
-          <strong><font color="white">Hang Zhao</font></strong>
-        </p>
+    <!-- About -->
+    <div class="container about">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="about-name">Hang Zhao</h1>
+          <p class="about-tagline">
+            Assistant Professor at IIIS, Tsinghua University · PI of
+            <a href="http://group.iiis.tsinghua.edu.cn/~marslab/">MARS Lab</a> ·
+            Co-founder of <a href="https://galaxea-ai.com/en">Galaxea</a>
+          </p>
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-3 about-side">
+          <img
+            alt="Portrait of Hang Zhao"
+            src="images/profile3.jpg"
+            class="img-circle about-photo"
+          />
+          <div class="about-links">
+            <a href="https://scholar.google.com/citations?user=DmahiOYAAAAJ"
+              >Google Scholar</a
+            >
+            <!-- <br> -->
+            <!-- <a href="https://github.com/hangzhaomit">GitHub</a> -->
+          </div>
+          <div class="about-contact">
+            <h4>Contact</h4>
+            <p>
+              Tsinghua University Science Park, C19<br />
+              ZhaoHang0124 (at) gmail.com
+            </p>
+          </div>
+        </div>
 
-    <!-- Site banner -->
-    <div class="container" style="margin-top: 20px">
-      <div
-        class="col-xs-7 col-md-3"
-        style="text-align: center; vertical-align: middle"
-      >
-        <br />
-        <img
-          src="images/profile3.jpg"
-          class="img-circle"
-          style="max-height: 80%; max-width: 80%"
-        />
-        <br /><br />
-        <a href="https://scholar.google.com/citations?user=DmahiOYAAAAJ"
-          >Google Scholar</a
-        >
-        <!-- <br> -->
-        <!-- <a href="https://github.com/hangzhaomit">GitHub</a> -->
-      </div>
+        <div class="col-xs-12 col-md-9 about-main">
+          <p>
+            Hey, I am Hang Zhao, an Assistant Professor at IIIS, Tsinghua
+            University, Principal Investigator of
+            <a href="http://group.iiis.tsinghua.edu.cn/~marslab/">MARS Lab</a>.
+            I am also a co-founder of
+            <a href="https://galaxea-ai.com/en">Galaxea</a>. My research
+            interests are
+            <strong
+              >multi-modal machine learning, autonomous driving and robot
+              learning</strong
+            >. Check out our
+            <strong
+              ><a href="http://group.iiis.tsinghua.edu.cn/~marslab/"
+                >MARS Lab Website</a
+              ></strong
+            >
+            for a full list of research projects and publications.
+          </p>
 
-      <div class="col-xs-12 col-md-6" style="vertical-align: middle">
-        <p align="justify">
-          <br />
-          Hey, I am Hang Zhao, an Assistant Professor at IIIS, Tsinghua
-          University, Principal Investigator of
-          <a href="http://group.iiis.tsinghua.edu.cn/~marslab/">MARS Lab</a>. I
-          am also a co-founder of
-          <a href="https://galaxea-ai.com/en">Galaxea</a>. My research interests
-          are
-          <strong
-            >multi-modal machine learning, autonomous driving and robot
-            learning</strong
-          >. Check out our
-          <strong
-            ><a href="http://group.iiis.tsinghua.edu.cn/~marslab/"
-              >MARS Lab Website</a
-            ></strong
-          >
-          for a full list of research projects and publications.
-        </p>
+          <p>
+            I was a Research Scientist at
+            <a href="https://waymo.com">Waymo</a> (known as Google's
+            self-driving project) from 2019 to 2020. Before that, I got my
+            Ph.D. degree at
+            <a href="http://www.mit.edu/">MIT</a> in 2019 under the supervision
+            of Professor
+            <a href="http://web.mit.edu/torralba/www/">Antonio Torralba</a>
+            (the Great Torralba!). Before MIT, I received my B.S. from Zhejiang
+            University in 2013.
+          </p>
 
-        <p align="justify">
-          I was a Research Scientist at
-          <a href="https://waymo.com">Waymo</a> (known as Google's self-driving
-          project) from 2019 to 2020. Before that, I got my Ph.D. degree at
-          <a href="http://www.mit.edu/">MIT</a> in 2019 under the supervision of
-          Professor
-          <a href="http://web.mit.edu/torralba/www/">Antonio Torralba</a> (the
-          Great Torralba!). Before MIT, I received my B.S. from Zhejiang
-          University in 2013.
-        </p>
+          <!-- <p> I am maintaining the most popular open-source semantic segmentation repository, check it out here <a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">Semantic-Segmentation-Pytorch</a>.</p>-->
 
-        <!-- <p align="justify"> I am maintaining the most popular open-source semantic segmentation repository, check it out here <a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">Semantic-Segmentation-Pytorch</a>.</p>-->
-
-        <p align="justify">
-          <strong
-            >I am actively looking for PostDoc/PhD/BS students and engineers
-            with CS/EE background to join my team. If you would like to work
-            with me, feel free to drop me an email with your resume.</strong
-          >
-        </p>
-      </div>
-
-      <!-- Contact Info-->
-      <div
-        class="col-xs-12 col-md-3"
-        style="text-align: left; vertical-align: middle"
-      >
-        <h3 style="margin-top: 20px">Contact Info</h3>
-        <ul>
-          <li>Address: Tsinghua University Science Park, C19</li>
-          <li>E-mail: ZhaoHang0124 (at) gmail.com</li>
-        </ul>
+          <p class="about-recruit">
+            <strong
+              >I am actively looking for PostDoc/PhD/BS students and engineers
+              with CS/EE background to join my team. If you would like to work
+              with me, feel free to drop me an email with your resume.</strong
+            >
+          </p>
+        </div>
       </div>
 
       <!-- 
@@ -140,25 +170,19 @@
           <h2>Selected Projects</h2>
 
           <!-- Galaxea G0.5 -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/g05_teaser.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Galaxea G0.5" src="images/g05_teaser.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >G0.5: One Autoregressive Stream for Reasoning and
                 Action</strong
               >
               <!-- <span class="label label-danger">Hot</span> --><br />
               Galaxea Team<br />
-              Technical Report 2026<br />
+              <span class="venue">Technical Report 2026</span><br />
               <i>
                 "A unified VLA that reasons, plans, and acts in one
                 autoregressive token stream."
@@ -175,26 +199,21 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Humanoid Parkour -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/human_parkour.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>Humanoid Parkour Learning</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Humanoid Parkour Learning" src="images/human_parkour.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>Humanoid Parkour Learning</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Ziwen Zhuang, Shenzhe Yao, Hang Zhao<br />
-              CoRL 2024<br />
+              <span class="venue">CoRL 2024</span><br />
               <i> "The first humanoid robot that learns to parkour!" </i> <br />
 
               <a
@@ -207,23 +226,18 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- DriveVLM -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/drivevlm.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="DriveVLM" src="images/drivevlm.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >DriveVLM: The Convergence of Autonomous Driving and Large
                 Vision-Language Models</strong
               >
@@ -231,7 +245,7 @@
               Xiaoyu Tian, Junru Gu, Bailin Li, Yicheng Liu, Yang Wang, Zhiyong
               Zhao, Kun Zhan<br />
               Peng Jia, Xianpeng Lang, Hang Zhao<br />
-              CoRL 2024<br />
+              <span class="venue">CoRL 2024</span><br />
               <i> "Slow-Fast Dual System for autnomous driving!" </i> <br />
 
               <a
@@ -244,23 +258,18 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- LCM -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/lcm.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="LCM" src="images/lcm.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Latent Consistency Models: Synthesizing High-Resolution Images
                 With Few-Step Inference</strong
               >
@@ -299,32 +308,22 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Parkour -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/parkour.jpeg" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>Robot Parkour Learning</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Robot Parkour Learning" src="images/parkour.jpeg" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>Robot Parkour Learning</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Ziwen Zhuang, Zipeng Fu, Jianren Wang, Christopher G Atkeson,
               Sören Schwertfeger,<br />Chelsea Finn, Hang Zhao<br />
-              <strong
-                >CoRL 2023 Oral
-                <a style="color: red"
-                  >Best System Paper Finalist (Top 3)</a
-                ></strong
-              ><br />
+              <span class="venue">CoRL 2023 Oral</span> <a style="color: red">Best System Paper Finalist (Top 3)</a><br />
               <i>
                 "Robot parkour skills empowered by onboard vision and a neural
                 network!"
@@ -346,28 +345,23 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Diff-foley -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/diff-foley.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Diff-Foley" src="images/diff-foley.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Diff-Foley: Synchronized Video-to-Audio Synthesis with Latent
                 Diffusion Models</strong
               ><br />
               Simian Luo, Chuanhao Yan, Chenxu Hu, Hang Zhao<br />
-              <strong>NeurIPS 2023</strong><br />
+              <span class="venue">NeurIPS 2023</span><br />
               <br />
 
               <a
@@ -380,29 +374,24 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Occ3D -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/Occ3D.png" width="200" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Occ3D" src="images/Occ3D.png" width="200"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for
                 Autonomous Driving</strong
               ><br />
               Xiaoyu Tian, Tao Jiang, Longfei Yun, Yucheng Mao, Huitong Yang,<br />Yue
               Wang, Yilun Wang, Hang Zhao<br />
-              <strong>NeurIPS Dataset Track 2023</strong><br />
+              <span class="venue">NeurIPS Dataset Track 2023</span><br />
               <br />
 
               <a
@@ -415,29 +404,24 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- ChatDB -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/chatdb.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="ChatDB" src="images/chatdb.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >ChatDB: Augmenting LLMs with Databases as Their Symbolic
                 Memory</strong
               ><br />
               Chenxu Hu, Jie Fu, Chenzhuang Du, Simian Luo, Junbo Zhao, Hang
               Zhao<br />
-              <strong>LLM@IJCAI 2023</strong><br />
+              <span class="venue">LLM@IJCAI 2023</span><br />
               <br />
 
               <a
@@ -450,23 +434,18 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- VCAD -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/VCAD.png" width="150" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>VCAD: Vision-Centric Autonomous Driving</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="VCAD" src="images/VCAD.png" width="150"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>VCAD: Vision-Centric Autonomous Driving</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Hang Zhao, Yue Wang, Yilun Wang, Justin Solomon, Vitor Guizilini,
               et al.<br />
@@ -486,12 +465,13 @@
               <a href="https://vcad-ai.github.io/" class="btn btn-default btn-sm"
                 >Workshop</a
               >
+              </div>
             </div>
           </div>
 
           <!-- SSCBench-->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/sscbench.png" width="250" />
               </div>
 
@@ -510,7 +490,7 @@
           <!-- Neural Map Prior (temporarily hidden)
           <div class="container" style="margin-top: 30px">
             <div
-              class="col-xs-12 col-lg-3"
+              class="col-xs-12 col-md-3"
               style="text-align: center; vertical-align: middle"
             >
               <img src="images/neural_map_prior.jpeg" width="250" />
@@ -546,25 +526,19 @@
           -->
 
           <!-- ViP3D -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/vip3d.gif" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="ViP3D" src="images/vip3d.gif" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >ViP3D: End-to-end Visual Trajectory Prediction via 3D Agent
                 Queries</strong
               ><br />
               Junru Gu*, Chenxu Hu*, Tianyuan Zhang, Xuanyao Chen, Yilun Wang,
               Yue Wang, Hang Zhao<br />
-              <strong>CVPR 2023</strong><br />
+              <span class="venue">CVPR 2023</span><br />
 
               <i> "Vision-based trajectory prediction autonomous driving."</i>
               <br />
@@ -579,27 +553,22 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- VectormapNet -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/vmp.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="VMP" src="images/vmp.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >VectorMapNet: End-to-end Vectorized HD Map Learning</strong
               ><br />
               Yicheng Liu, Tianyuan Yuan, Yue Wang, Yilun Wang, Hang Zhao<br />
-              <strong>ICML 2023</strong><br />
+              <span class="venue">ICML 2023</span><br />
 
               <i> "Vectorized mapping from onboard sensors!" </i> <br />
 
@@ -613,13 +582,14 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- InterSim (temporarily hidden)
           <div class="container" style="margin-top: 30px">
             <div
-              class="col-xs-12 col-lg-3"
+              class="col-xs-12 col-md-3"
               style="text-align: center; vertical-align: middle"
             >
               <img src="images/intersim.png" width="180" />
@@ -653,24 +623,18 @@
           -->
 
           <!-- M2I -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/M2I.gif" width="180" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="M2I interactive prediction" src="images/M2I.gif" width="180"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >M2I: From Factored Marginal Trajectory Prediction to
                 Interactive Prediction</strong
               ><br />
               Qiao Sun, Xin Huang, Junru Gu, Brian C Williams, Hang Zhao<br />
-              <strong>CVPR 2022</strong><br />
+              <span class="venue">CVPR 2022</span><br />
 
               <i> "Towards interactive motion prediction." </i> <br /><br />
 
@@ -684,12 +648,13 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- FUTR3D -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/futr3d.png" width="220" />
               </div>
 
@@ -706,7 +671,7 @@
  -->
           <!-- MUTR3D -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/mutr3d.png" width="220" />
               </div>
 
@@ -723,24 +688,18 @@
  -->
 
           <!-- HDMapNet -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/hdmapnet_demo.gif" width="180" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="HDMapNet demo" src="images/hdmapnet_demo.gif" width="180"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >HDMapNet: An Online HD Map Construction and Evaluation
                 Framework</strong
               ><br />
               Qi Li, Yue Wang, Yilun Wang, Hang Zhao<br />
-              <strong>CVPR 2021 Workshop best paper, ICRA 2022</strong><br />
+              <span class="venue">CVPR 2021 Workshop best paper, ICRA 2022</span><br />
 
               <i> "HD map learning from onboard sensors!" </i> <br /><br />
 
@@ -754,12 +713,13 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- SEMI -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/SEMI.jpeg" width="200" />
               </div>
 
@@ -777,7 +737,7 @@
           <!-- Neural Dubber (temporarily hidden)
           <div class="container" style="margin-top: 30px">
             <div
-              class="col-xs-12 col-lg-3"
+              class="col-xs-12 col-md-3"
               style="text-align: center; vertical-align: middle"
             >
               <img src="images/neural_dubber.png" width="250" />
@@ -812,26 +772,20 @@
           -->
 
           <!-- DETR3D -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/detr3d.jpeg" width="180" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="DETR3D" src="images/detr3d.jpeg" width="180"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D
                 Queries</strong
               >
               <!-- <span class="label label-danger">Hot</span> --><br />
               Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang,
               Hang Zhao, Justin Solomon<br />
-              <strong>CoRL 2021</strong><br />
+              <span class="venue">CoRL 2021</span><br />
 
               <i> "A new paradigm of 3D object detection from 2D images!" </i>
               <br /><br />
@@ -841,29 +795,24 @@
                 class="btn btn-default btn-sm"
                 >Paper</a
               >
+              </div>
             </div>
           </div>
 
           <!-- decorr -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/decorrelation.jpg" width="200" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Decorrelation" src="images/decorrelation.jpg" width="200"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >On Feature Decorrelation in Self-Supervised Learning</strong
               >
               <!-- <span class="label label-danger">Hot</span> --><br />
               Tianyu Hua, Wenxiao Wang, Zihui Xue, Yue Wang, Sucheng Ren, Hang
               Zhao<br />
-              <strong>ICCV 2021 Oral</strong><br />
+              <span class="venue">ICCV 2021 Oral</span><br />
 
               <i
                 >"It reveals the connection between model collapse and feature
@@ -881,28 +830,23 @@
                 class="btn btn-default btn-sm"
                 >Project</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Motion Dataset -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/waymo_motion.gif" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Waymo motion prediction" src="images/waymo_motion.gif" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Large Scale Interactive Motion Forecasting for Autonomous
                 Driving: The Waymo Open Motion Dataset</strong
               ><br />
               Scott Ettinger, et al.<br />
-              <strong>ICCV 2021 Oral</strong><br />
+              <span class="venue">ICCV 2021 Oral</span><br />
 
               <!-- <i> "Multimodal data brings knowledge for free!" </i> <br><br> -->
               <br />
@@ -916,12 +860,13 @@
                 class="btn btn-default btn-sm"
                 >Waymo Blog</a
               >
+              </div>
             </div>
           </div>
 
           <!-- MKE -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/mke.png" width="200" />
               </div>
 
@@ -941,7 +886,7 @@
           <!-- DenseTNT (temporarily hidden)
           <div class="container" style="margin-top: 30px">
             <div
-              class="col-xs-12 col-lg-3"
+              class="col-xs-12 col-md-3"
               style="text-align: center; vertical-align: middle"
             >
               <img src="images/densetnt.png" width="250" />
@@ -986,7 +931,7 @@
           <!-- HDMapGen -->
           <!--
             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/HDMapGen.jpg" width="200" />
               </div>
 
@@ -1001,24 +946,18 @@
             -->
 
           <!-- TNT -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/tnt.png" width="200" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>TNT: Target-driveN Trajectory Prediction</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="TNT trajectory prediction" src="images/tnt.png" width="200"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>TNT: Target-driveN Trajectory Prediction</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Hang Zhao, Jiyang Gao, Tian Lan, Chen Sun, Benjamin Sapp,<br />
               Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai,<br />
               Cordelia Schmid, Congcong Li, Dragomir Anguelov<br />
-              Conference on Robot Learning (<strong>CoRL</strong>) 2020<br />
+              <span class="venue">CoRL 2020</span><br />
 
               <i> "A new motion prediction framework for self-driving!" </i>
               <br /><br />
@@ -1027,31 +966,25 @@
                 class="btn btn-default btn-sm"
                 >Paper</a
               >
+              </div>
             </div>
           </div>
 
           <!-- VectorNet -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/Vectornet.gif" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="VectorNet" src="images/Vectornet.gif" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized
                 Representation</strong
               >
               <!-- <span class="label label-danger">Hot</span> --><br />
               Jiyang Gao, Chen Sun, Hang Zhao, Yi Shen, <br />
               Dragomir Anguelov, Congcong Li, Cordelia Schmid<br />
-              In Proc. Computer Vision and Pattern Recognition
-              (<strong>CVPR</strong>) 2020<br />
+              <span class="venue">CVPR 2020</span><br />
 
               <!-- <i> "A graphical representation of HD maps." </i> <br><br> -->
               <br />
@@ -1065,30 +998,23 @@
                 class="btn btn-default btn-sm"
                 >Waymo Blog</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Waymo Open Dataset -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/waymo_od_challenge.jpg" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Waymo Open Dataset Challenge" src="images/waymo_od_challenge.jpg" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Scalability in Perception for Autonomous Driving: Waymo Open
                 Dataset</strong
               ><br />
               Pei Sun et al.<br />
-              In Proc. Computer Vision and Pattern Recognition
-              (<strong>CVPR</strong>) 2020<br />
-              Seattle (virtual), June. 2020 <br />
+              <span class="venue">CVPR 2020</span><br />
 
               <!-- <i> "Waymo is in a unique position to contribute to the research community with<br> one of the largest and most diverse autonomous driving datasets ever released." </i> <br> -->
               <br />
@@ -1105,13 +1031,14 @@
                 class="btn btn-default btn-sm"
                 >Paper</a
               >
+              </div>
             </div>
           </div>
 
           <!-- SoM -->
           <!--
             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/sound_of_motions.png" width="200" />
               </div>
 
@@ -1131,7 +1058,7 @@
           <!-- StereoTracking -->
           <!--
             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/stereo_tracking.jpeg" width="200" />
               </div>
 
@@ -1150,7 +1077,7 @@
 
           <!-- RFShape -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/rfavatar.gif" width="200" />
               </div>
 
@@ -1167,27 +1094,19 @@
             </div>
  -->
           <!-- HACS -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/slac.jpg" width="200" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="SLAC" src="images/slac.jpg" width="200"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>
                 HACS: Human Action Clips and Segments Dataset for Recognition
                 and Temporal Localization</strong
               ><br />
               Hang Zhao, Zhicheng Yan, Lorenzo Torresani, Antonio Torralba
               <br />
-              In Proc. International Conference on Computer Vision
-              (<strong>ICCV</strong>)<br />
-              Seoul, Korea, Oct. 2019<br />
+              <span class="venue">ICCV 2019</span><br />
 
               <i>
                 "A large-scale dataset for temporal action localization and
@@ -1208,29 +1127,22 @@
                 class="btn btn-default btn-sm"
                 >GitHub Page</a
               >
+              </div>
             </div>
           </div>
 
           <!-- SoP -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/sound_of_pixels.png" width="220" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>The Sound of Pixels</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="The Sound of Pixels" src="images/sound_of_pixels.png" width="220"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>The Sound of Pixels</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Hang Zhao, Chuang Gan, Andrew Rouditchenko, Carl Vondrick, Josh
               McDermott, Antonio Torralba<br />
-              In Proc. European Conference on Computer Vision
-              (<strong>ECCV</strong>)<br />
-              Munich, Germany, Sep. 2018<br />
+              <span class="venue">ECCV 2018</span><br />
 
               <i> "Listen to the sound of pixels!" </i> <br />
               <a
@@ -1253,12 +1165,13 @@
                 class="btn btn-default btn-sm"
                 >News Coverage</a
               >
+              </div>
             </div>
           </div>
 
           <!-- RFPose3D -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/rf-pose-3d.png" width="250" />
               </div>
 
@@ -1275,27 +1188,19 @@
             </div>
  -->
           <!-- RFPose -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/rf-pose.png" width="250" />
-            </div>
-
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="RF-Pose" src="images/rf-pose.png" width="250"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong
                 >Through-Wall Human Pose Estimation Using Radio Signals</strong
               >
               <!-- <span class="label label-danger">Hot</span> --><br />
               Mingmin Zhao, Tianhong Li, Mohammad Alsheikh, Yonglong Tian, Hang
               Zhao,<br />Antonio Torralba, Dina Katabi<br />
-              In Proc. Computer Vision and Pattern Recognition
-              (<strong>CVPR</strong>) <br />
-              Salt Lake City, Utah, June. 2018 <br />
+              <span class="venue">CVPR 2018</span><br />
 
               <!-- <i> "X-ray vision: pose estimation with radio signals." </i> <br> -->
 
@@ -1314,12 +1219,13 @@
                 class="btn btn-default btn-sm"
                 >News Coverage</a
               >
+              </div>
             </div>
           </div>
 
           <!-- Open Voc -->
           <!--             <div class="container" style="margin-top: 30px;">
-              <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+              <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
                 <img src="images/openvoc.png" width="220" />
               </div>
 
@@ -1340,7 +1246,7 @@
           <!-- ADE Challenge 2017-->
           <!--
             <div class="container" style="margin-top: 30px;">
-            <div class="col-xs-12 col-lg-3" style="text-align: center; vertical-align: middle;">
+            <div class="col-xs-12 col-md-3" style="text-align: center; vertical-align: middle;">
               <img src="images/challenge2017.jpg" width="220" />
             </div>
             <div class="col-xs-12 col-md-9" style="text-align: left; vertical-align: middle;">
@@ -1359,24 +1265,17 @@
             -->
 
           <!-- ADE-->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/sceneparsing_cvpr2017.png" width="220" />
-            </div>
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>Scene Parsing through ADE20K Dataset</strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Scene parsing" src="images/sceneparsing_cvpr2017.png" width="220"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>Scene Parsing through ADE20K Dataset</strong>
               <!-- <span class="label label-danger">Hot</span> --><br />
               Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Barriuso,
               Antonio Torralba <br />
-              In Proc. Computer Vision and Pattern Recognition
-              (<strong>CVPR</strong>) <br />
-              Honolulu, Hawaii, July. 2017 <br />
+              <span class="venue">CVPR 2017</span><br />
 
               <a
                 href="http://people.csail.mit.edu/bzhou/publication/scene-parse-camera-ready.pdf"
@@ -1399,32 +1298,27 @@
                 >Online Demo</a
               >
               <br />
+              </div>
             </div>
           </div>
 
           <!-- ADE Challenge 2016-->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/challenge2016.png" width="220" />
-            </div>
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <strong>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Scene Parsing Challenge 2016" src="images/challenge2016.png" width="220"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <strong>
                 Semantic Understanding of Scenes through the ADE20K
                 Dataset</strong
               ><br />
               Bolei Zhou, Hang Zhao, Xavier Puig, Tete Xiao, Sanja Fidler, Adela
               Barriuso, Antonio Torralba <br />
-              International Journal on Computer Vision 2018
-              (<strong>IJCV</strong>)<br />
+              <span class="venue">IJCV 2018</span><br />
               <br />
 
-              <strong> ILSVRC'16 MIT Scene Parsing Challenge</strong><br />
+              <span class="venue">ILSVRC'16 MIT Scene Parsing Challenge</span><br />
               <i>
                 "I co-organized the scene parsing challenge at ILSVRC'16. Check
                 out our dataset now!" <br />
@@ -1460,29 +1354,24 @@
                 >Online Demo</a
               >
               <br />
+              </div>
             </div>
           </div>
 
           <!-- Loss NN -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/lossNN.png" width="220" />
-            </div>
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <p>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Neural network loss visualization" src="images/lossNN.png" width="220"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <p>
                 <strong>
                   Loss Functions for Neural Networks for Image Processing
                   <!-- <span class="label label-danger">Hot</span> --><br /> </strong
                 >Hang Zhao, Orazio Gallo, Iuri Frosio and Jan Kautz <br />
-                arXiv:1511.08861<br />
-                IEEE Transactions on Computational Imaging 2017
-                (<strong>TCI</strong>)<br /><br />
+                <span class="venue">arXiv:1511.08861</span><br />
+                <span class="venue">TCI 2017</span><br /><br />
 
                 <i>
                   "How important are loss functions for image processing tasks
@@ -1513,30 +1402,24 @@
 
                 <br />
               </p>
+              </div>
             </div>
           </div>
 
           <!-- Duckietown-->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/duckietown.png" width="220" />
-            </div>
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <p>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Duckietown" src="images/duckietown.png" width="220"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <p>
                 <strong>
                   Duckietown: an Open, Inexpensive and Flexible Platform for
                   Autonomy Education and Research</strong
                 ><br />
 
-                IEEE International Conference on Robotics and Automation
-                (<strong>ICRA</strong>)<br />
-                Singapore, May. 2017 <br />
+                <span class="venue">ICRA 2017</span><br />
 
                 <i>
                   "We are building an open-source education and research
@@ -1569,30 +1452,24 @@
 
                 <br />
               </p>
+              </div>
             </div>
           </div>
 
           <!-- Modulo UHDR -->
-          <div class="container" style="margin-top: 30px">
-            <div
-              class="col-xs-12 col-lg-3"
-              style="text-align: center; vertical-align: middle"
-            >
-              <img src="images/moduloHDR.png" width="200" />
-            </div>
-            <div
-              class="col-xs-12 col-md-9"
-              style="text-align: left; vertical-align: middle"
-            >
-              <p>
+          <div class="project-card">
+            <div class="row">
+              <div class="col-xs-12 col-md-3 project-thumb">
+                <img alt="Modulo HDR" src="images/moduloHDR.png" width="200"  loading="lazy" />
+              </div>
+              <div class="col-xs-12 col-md-9 project-body">
+                <p>
                 <strong>
                   Unbounded High Dynamic Range Photography using a Modulo Camera
                   <!-- <span class="label label-danger">Hot</span> --><br /> </strong
                 >Hang Zhao, Boxin Shi, Christy Fernandez-Cull, Sai-Kit Yeung and
                 Ramesh Raskar <br />
-                In Proc. International Conference on Computational Photography
-                (<strong>ICCP</strong>) <br />
-                Houston, USA, Apr. 2015 (Acceptance Rate: 24%)<br />
+                <span class="venue">ICCP 2015</span><br />
                 Oral Presentation [<strong
                   ><a href="images/ICCP2015Award.jpg" style="color: red"
                     >Best Paper runner-up</a
@@ -1623,6 +1500,7 @@
                 >
                 <br />
               </p>
+              </div>
             </div>
           </div>
 
@@ -1991,13 +1869,13 @@
         <div class="col-md-12">
           <h3>Current and Past Affiliations</h3>
         </div>
-        <div class="container">
+        <div class="row affiliations-logos">
           <div
             class="col-xs-6 col-md-2"
             style="text-align: center; align: middle"
           >
             <a href="https://www.tsinghua.edu.cn/en/">
-              <img src="images/tsinghua.jpg" height="95" />
+              <img alt="Tsinghua University logo" src="images/tsinghua.jpg" height="95"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2005,7 +1883,7 @@
             style="text-align: center; align: middle"
           >
             <a href="http://csail.mit.edu">
-              <img src="images/csail_logo.png" height="95" />
+              <img alt="MIT CSAIL logo" src="images/csail_logo.png" height="95"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2013,7 +1891,7 @@
             style="text-align: center; align: middle"
           >
             <a href="http://media.mit.edu">
-              <img src="images/MIT_ML_Logo.png" height="95" />
+              <img alt="MIT Media Lab logo" src="images/MIT_ML_Logo.png" height="95"  loading="lazy" />
             </a>
           </div>
           <!--  <div class="col-xs-6 col-md-2" style="text-align: center; vertical-align: middle;">
@@ -2024,7 +1902,7 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.mit.edu">
-              <img src="images/MIT_Logo.png" height="75" />
+              <img alt="MIT logo" src="images/MIT_Logo.png" height="75"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2032,7 +1910,7 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.ucla.edu/">
-              <img src="images/UCLA_Logo.jpg" height="85" />
+              <img alt="UCLA logo" src="images/UCLA_Logo.jpg" height="85"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2040,21 +1918,23 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.zju.edu.cn/english/">
-              <img src="images/ZJU_Logo.png" height="100" />
+              <img alt="Zhejiang University logo" src="images/ZJU_Logo.png" height="100"  loading="lazy" />
             </a>
           </div>
+        </div>
 
-          <!-- Company -->
+        <!-- Company -->
+        <div class="row affiliations-logos">
           <div
             class="col-xs-6 col-md-2"
             style="text-align: center; vertical-align: middle"
           >
             <a href="https://galaxea-ai.com/en">
-              <img
+              <img alt="Galaxea logo"
                 class="img-center"
                 src="images/galaxea_logo.png"
                 width="180"
-              />
+               loading="lazy" />
             </a>
           </div>
           <div
@@ -2062,7 +1942,7 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="https://waymo.com/">
-              <img class="img-center" src="images/waymo_logo.png" height="90" />
+              <img alt="Waymo logo" class="img-center" src="images/waymo_logo.png" height="90"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2070,11 +1950,11 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="https://research.fb.com/">
-              <img
+              <img alt="Facebook logo"
                 class="img-center"
                 src="images/facebook_logo.jpg"
                 height="110"
-              />
+               loading="lazy" />
             </a>
           </div>
           <div
@@ -2082,7 +1962,7 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.merl.com/">
-              <img class="img-center" src="images/MERL_logo.png" height="75" />
+              <img alt="MERL logo" class="img-center" src="images/MERL_logo.png" height="75"  loading="lazy" />
             </a>
           </div>
           <div
@@ -2090,11 +1970,11 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.nvidia.com">
-              <img
+              <img alt="NVIDIA logo"
                 class="img-center"
                 src="images/NVIDIA_Logo.png"
                 height="90"
-              />
+               loading="lazy" />
             </a>
           </div>
           <div
@@ -2102,7 +1982,7 @@
             style="text-align: center; vertical-align: middle"
           >
             <a href="http://www.tvisioninsights.com">
-              <img src="images/TVI_Logo.jpg" height="80" />
+              <img alt="TVision Insights logo" src="images/TVI_Logo.jpg" height="80"  loading="lazy" />
             </a>
           </div>
           <!-- <div class="col-xs-6 col-md-2" style="text-align: center; vertical-align: middle;">
