@@ -93,20 +93,63 @@ a:focus {
   font-weight: 500;
 }
 
-.about-contact {
-  margin-top: 22px;
-  color: var(--muted);
+.about-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border: 1px solid #c3cfdd;
+  border-radius: 999px;
+  color: var(--brand);
   font-size: 14px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.about-link-btn:hover,
+.about-link-btn:focus {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-contact {
+  margin-top: 20px;
+  padding: 13px 16px;
+  background: var(--bg-soft);
+  border-radius: 10px;
+  text-align: left;
+  color: var(--muted);
+  font-size: 13.5px;
   line-height: 1.6;
 }
 
 .about-contact h4 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text);
+}
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.contact-row + .contact-row {
+  margin-top: 6px;
+}
+
+.contact-row .glyphicon {
+  flex-shrink: 0;
+  color: var(--brand);
+  font-size: 12px;
 }
 
 .about-recruit {
@@ -115,6 +158,11 @@ a:focus {
   background: rgba(20, 69, 125, 0.06);
   border-left: 3px solid var(--brand);
   border-radius: 0 8px 8px 0;
+}
+
+.about-main {
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 @media (max-width: 991px) {
