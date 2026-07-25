@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Curriculum vitae of Hang Zhao, Assistant Professor at Tsinghua University and co-founder of Galaxea."
+    />
+    <title>Hang Zhao — Curriculum Vitae</title>
+    <style>
+      :root {
+        --ink: #17202a;
+        --muted: #627080;
+        --accent: #174a7e;
+        --accent-soft: #eef4fa;
+        --rule: #d9e1e8;
+        --paper: #ffffff;
+        --canvas: #f4f7f9;
+        --measure: 980px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 72px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--canvas);
+        font-family:
+          Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.58;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.14em;
+      }
+
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #9bc2e6;
+        outline-offset: 3px;
+        border-radius: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        left: 16px;
+        top: -60px;
+        z-index: 100;
+        padding: 9px 12px;
+        color: white;
+        background: var(--accent);
+        border-radius: 4px;
+      }
+
+      .skip-link:focus {
+        top: 12px;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--rule);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+      }
+
+      .topbar-inner {
+        width: min(var(--measure), calc(100% - 32px));
+        min-height: 54px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .home-link {
+        margin-right: auto;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .topbar nav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .topbar nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .topbar nav a {
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .print-button {
+        flex: 0 0 auto;
+        padding: 7px 11px;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        color: var(--accent);
+        background: white;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .cv {
+        width: min(var(--measure), calc(100% - 32px));
+        margin: 28px auto 56px;
+        padding: 54px 62px 70px;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        box-shadow: 0 14px 38px rgba(27, 47, 67, 0.08);
+      }
+
+      .cv-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 28px;
+        padding-bottom: 24px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .eyebrow {
+        margin: 0 0 6px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(38px, 6vw, 56px);
+        line-height: 1;
+        letter-spacing: -0.025em;
+      }
+
+      .headline {
+        max-width: 680px;
+        margin: 12px 0 0;
+        color: #334252;
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .contact {
+        display: grid;
+        justify-items: end;
+        gap: 4px;
+        color: var(--muted);
+        font-size: 13.5px;
+        text-align: right;
+      }
+
+      .updated {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .summary {
+        margin: 24px 0 0;
+        padding: 17px 20px;
+        border-left: 4px solid var(--accent);
+        background: var(--accent-soft);
+        font-size: 15.5px;
+      }
+
+      section {
+        margin-top: 34px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      h2 {
+        margin: 0;
+        padding-bottom: 7px;
+        color: var(--accent);
+        font-size: 17px;
+        line-height: 1.2;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+      }
+
+      .section-note {
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .entry {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 150px;
+        gap: 28px;
+        break-inside: avoid;
+      }
+
+      .entry h3 {
+        margin: 0;
+        font-size: 15.5px;
+        line-height: 1.35;
+      }
+
+      .role {
+        margin: 2px 0 0;
+        color: #334252;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .entry ul,
+      .compact-list {
+        margin: 5px 0 0;
+        padding-left: 19px;
+      }
+
+      .entry li,
+      .compact-list li {
+        margin: 2px 0;
+      }
+
+      .two-column {
+        columns: 2;
+        column-gap: 44px;
+      }
+
+      .two-column li {
+        break-inside: avoid;
+        margin-bottom: 7px;
+      }
+
+      .award-list,
+      .talk-list,
+      .service-list,
+      .press-list,
+      .patent-list {
+        margin: 0;
+        padding-left: 21px;
+      }
+
+      .award-list li,
+      .talk-list li,
+      .service-list li,
+      .press-list li,
+      .patent-list li {
+        margin-bottom: 7px;
+      }
+
+      .press-source {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .publication-list {
+        margin: 0;
+        padding-left: 3.5em;
+      }
+
+      .publication-list li {
+        margin-bottom: 9px;
+        padding-left: 0.35em;
+        break-inside: avoid;
+      }
+
+      .publication-list li::marker {
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .paper-link {
+        display: inline-block;
+        margin-left: 5px;
+        padding: 0 6px;
+        border: 1px solid #c8d8e7;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.55;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .legend {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      footer {
+        width: min(var(--measure), calc(100% - 32px));
+        margin: 0 auto 34px;
+        color: var(--muted);
+        font-size: 12.5px;
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        body {
+          font-size: 14.5px;
+        }
+
+        .topbar-inner {
+          width: min(100% - 24px, var(--measure));
+          gap: 12px;
+        }
+
+        .topbar nav {
+          display: none;
+        }
+
+        .cv {
+          width: 100%;
+          margin: 0;
+          padding: 34px 22px 54px;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .cv-header {
+          grid-template-columns: 1fr;
+          align-items: start;
+          gap: 18px;
+        }
+
+        .contact {
+          justify-items: start;
+          text-align: left;
+        }
+
+        .entry {
+          grid-template-columns: 1fr;
+          gap: 3px;
+        }
+
+        .date {
+          grid-row: 1;
+          text-align: left;
+        }
+
+        .two-column {
+          columns: 1;
+        }
+
+        .section-heading {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 2px;
+        }
+      }
+
+      @page {
+        size: A4;
+        margin: 14mm 15mm 16mm;
+      }
+
+      @media print {
+        :root {
+          --accent: #173f68;
+          --canvas: white;
+        }
+
+        body {
+          background: white;
+          font-size: 10.5pt;
+          line-height: 1.38;
+        }
+
+        .topbar,
+        .skip-link {
+          display: none !important;
+        }
+
+        .cv {
+          width: auto;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .cv-header {
+          gap: 18px;
+          padding-bottom: 14px;
+        }
+
+        h1 {
+          font-size: 30pt;
+        }
+
+        .headline {
+          font-size: 11pt;
+        }
+
+        .summary {
+          margin-top: 14px;
+          padding: 10px 13px;
+          font-size: 10.5pt;
+        }
+
+        section {
+          margin-top: 20px;
+        }
+
+        h2 {
+          font-size: 12pt;
+        }
+
+        .entry {
+          grid-template-columns: minmax(0, 1fr) 120px;
+          gap: 16px;
+        }
+
+        .paper-link {
+          border: 0;
+          padding: 0;
+          font-size: 8.5pt;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        footer {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="home-link" href="index.html">← Homepage</a>
+        <nav aria-label="CV sections">
+          <a href="#appointments">Appointments</a>
+          <a href="#education">Education</a>
+          <a href="#activities">Service</a>
+          <a href="#talks">Talks</a>
+          <a href="#publications">Publications</a>
+        </nav>
+        <button class="print-button" type="button" onclick="window.print()">
+          Print / PDF
+        </button>
+      </div>
+    </div>
+
+    <main class="cv" id="main">
+      <header class="cv-header">
+        <div>
+          <p class="eyebrow">Curriculum Vitae</p>
+          <h1>Hang Zhao</h1>
+          <p class="headline">
+            Assistant Professor, IIIS, Tsinghua University · Principal
+            Investigator, MARS Lab · Co-founder &amp; Chief Scientist, Galaxea
+          </p>
+        </div>
+        <div class="contact">
+          <span>Tsinghua University Science Park, Beijing, China</span>
+          <a href="mailto:ZhaoHang0124@gmail.com">ZhaoHang0124@gmail.com</a>
+          <a href="https://hangzhaomit.github.io">hangzhaomit.github.io</a>
+          <a href="https://scholar.google.com/citations?user=DmahiOYAAAAJ"
+            >Google Scholar</a
+          >
+          <span class="updated">Updated July 2026</span>
+        </div>
+      </header>
+
+      <p class="summary">
+        My research focuses on multimodal learning, robotics, and autonomous
+        driving, with an emphasis on embodied foundation models, robot learning,
+        and scalable perception and prediction systems.
+      </p>
+
+      <section id="appointments">
+        <div class="section-heading"><h2>Appointments</h2></div>
+        <div class="timeline">
+          <article class="entry">
+            <div>
+              <h3>Galaxea · Beijing, China</h3>
+              <p class="role">Co-founder &amp; Chief Scientist</p>
+              <ul>
+                <li>
+                  Embodied foundation models and generalist robot learning,
+                  including G0.5 and Fast-WAM.
+                </li>
+              </ul>
+            </div>
+            <div class="date">Sep 2023 – Present</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Tsinghua University · Beijing, China</h3>
+              <p class="role">
+                Assistant Professor, Institute for Interdisciplinary Information
+                Sciences; Principal Investigator, MARS Lab
+              </p>
+              <ul>
+                <li>
+                  Research in multimodal learning, robotics, and autonomous
+                  driving.
+                </li>
+                <li>
+                  Led work on vision-centric autonomous driving, DriveVLM, and
+                  whole-body robot parkour.
+                </li>
+              </ul>
+            </div>
+            <div class="date">Jan 2021 – Present</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Waymo · Mountain View, California</h3>
+              <p class="role">Research Scientist</p>
+              <ul>
+                <li>
+                  Waymo Open Dataset and Waymo Open Motion Dataset; behavior
+                  prediction methods including VectorNet and TNT.
+                </li>
+              </ul>
+            </div>
+            <div class="date">Jul 2019 – Dec 2020</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>MIT CSAIL · Cambridge, Massachusetts</h3>
+              <p class="role">Graduate Research Assistant</p>
+              <ul>
+                <li>
+                  Cross-modal learning across vision, sound, and radio signals;
+                  scene understanding and the ADE20K dataset.
+                </li>
+              </ul>
+            </div>
+            <div class="date">Jan 2016 – Jun 2019</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>MIT Media Lab · Cambridge, Massachusetts</h3>
+              <p class="role">Graduate Research Assistant</p>
+              <ul>
+                <li>
+                  Computational photography, including unbounded high-dynamic-
+                  range imaging with a modulo camera.
+                </li>
+              </ul>
+            </div>
+            <div class="date">Sep 2013 – Jan 2016</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Duckietown Engineering Co. · Cambridge, Massachusetts</h3>
+              <p class="role">
+                Vehicle Autonomy Engineer &amp; Teaching Assistant
+              </p>
+            </div>
+            <div class="date">Feb 2016 – May 2016</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>TVision Insights · Cambridge, Massachusetts</h3>
+              <p class="role">Co-founder &amp; CTO</p>
+            </div>
+            <div class="date">Jan 2014 – Jun 2015</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="section-heading"><h2>Education</h2></div>
+        <div class="timeline">
+          <article class="entry">
+            <div>
+              <h3>Massachusetts Institute of Technology</h3>
+              <p class="role">Ph.D. in Computer Science</p>
+              <ul>
+                <li>Advisor: Professor Antonio Torralba</li>
+                <li>
+                  Computer Science and Artificial Intelligence Laboratory
+                  (CSAIL)
+                </li>
+              </ul>
+            </div>
+            <div class="date">Sep 2013 – Jun 2019</div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>Zhejiang University</h3>
+              <p class="role">B.Eng. in Information Engineering</p>
+              <ul>
+                <li>Chu Kochen Honors College; with honors, top 1%</li>
+              </ul>
+            </div>
+            <div class="date">Sep 2009 – Jun 2013</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="honors">
+        <div class="section-heading"><h2>Selected Honors &amp; Awards</h2></div>
+        <ul class="award-list">
+          <li>
+            Best System Paper Finalist (Top 3), CoRL 2023 — Robot Parkour
+            Learning.
+          </li>
+          <li>
+            Oral presentation (Top 5%), ICLR 2023 — The Modality Focusing
+            Hypothesis.
+          </li>
+          <li>
+            Waymo Open Dataset Motion Prediction Challenge Winner, 2021 —
+            DenseTNT.
+          </li>
+          <li>CVPR 2021 Workshop Best Paper Nominee — HDMapNet.</li>
+          <li>Best Paper Runner-up, ICCP 2015.</li>
+        </ul>
+      </section>
+
+      <section id="teaching">
+        <div class="section-heading"><h2>Teaching</h2></div>
+        <ul class="compact-list two-column">
+          <li>
+            Tsinghua — Advances in Autonomous Driving and Intelligent Vehicles
+            (Lecturer)
+          </li>
+          <li>
+            Tsinghua — Introduction to Multimedia Computing (Lecturer)
+          </li>
+          <li>MIT 6.869 — Advances in Computer Vision (Teaching Assistant)</li>
+          <li>
+            MIT 2.166 — Autonomous Vehicles / Duckietown (Course Developer,
+            Teaching Assistant)
+          </li>
+          <li>MIT 6.870 — Smartphone Vision (Teaching Assistant)</li>
+          <li>
+            MIT 2.007 — Design and Manufacturing I (Teaching Assistant)
+          </li>
+        </ul>
+      </section>
+
+      <section id="opensource">
+        <div class="section-heading"><h2>Open-source Projects</h2></div>
+        <ul class="compact-list">
+          <li>
+            <strong>Galaxea G0.5</strong> — a unified vision-language-action
+            model that reasons, plans, and acts in one autoregressive stream.
+            <a href="https://opengalaxea.github.io/G05/">Project</a>
+          </li>
+          <li>
+            <strong>Vision-Centric Autonomous Driving</strong> — an open
+            research platform for vision-centric autonomous driving.
+            <a href="https://vcad-ai.github.io/">Project</a>
+          </li>
+          <li>
+            <strong>Scene Parsing</strong> — a widely used semantic segmentation
+            codebase.
+            <a
+              href="https://github.com/CSAILVision/semantic-segmentation-pytorch"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <strong>Duckietown</strong> — a platform for autonomous-driving
+            education and research.
+            <a href="https://github.com/duckietown">GitHub</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="activities">
+        <div class="section-heading"><h2>Professional Service</h2></div>
+        <ul class="service-list">
+          <li>
+            Co-organizer, RSS 2026 Workshop on Post-Training for Robotics
+            Foundation Models.
+          </li>
+          <li>
+            Co-organizer, Workshop on Sight and Sound at CVPR 2020–2026.
+          </li>
+          <li>
+            Co-organizer, Workshop on Vision-Centric Autonomous Driving at CVPR
+            2023 and ECCV 2024.
+          </li>
+          <li>
+            Co-organizer, CVPR 2024 Workshop on Vision and Language for
+            Autonomous Driving and Robotics.
+          </li>
+          <li>Workshop Co-chair, ICLR 2023.</li>
+          <li>
+            Co-organizer, HACS Temporal Action Localization Challenge at CVPR
+            2020.
+          </li>
+          <li>
+            Co-organizer, workshops and challenges at ICCV 2019, CVPR 2019, ICCV
+            2017, ECCV 2016, and the MIT Vision Seminar.
+          </li>
+          <li>
+            Reviewer for TPAMI, IJCV, TIP, CVIU, TCI, CVPR, ICCV, ECCV,
+            NeurIPS, ICML, and ICLR.
+          </li>
+        </ul>
+      </section>
+
+      <section id="talks">
+        <div class="section-heading">
+          <h2>Selected Invited Talks</h2>
+          <span class="section-note">Most recent first</span>
+        </div>
+        <ul class="talk-list">
+          <li>
+            Keynote, RSS 2026 Workshop on Semantic Reasoning and Goal
+            Understanding in Robotics, Jul 2026.
+          </li>
+          <li>
+            Invited talk, ICCV 2025 Workshop on Human-Robot-Scene Interaction
+            and Collaboration, Oct 2025.
+          </li>
+          <li>Keynote speech, CoRL 2025, Sep 2025.</li>
+          <li>
+            Invited talk, CoRL 2025 Workshop on Robotics World Modeling, Sep
+            2025.
+          </li>
+          <li>
+            Invited talk, ECCV 2024 Workshop on Autonomous Vehicles Meet
+            Multimodal Foundation Models, Oct 2024.
+          </li>
+          <li>
+            Invited talks at ICCV AV4D, CVPR WAD, VALSE, ICLR, NeurIPS ML4AD,
+            IROS, Samsung Research, Amazon Alexa, Philips, Harvard, Google
+            Cambridge, and MIT.
+          </li>
+        </ul>
+      </section>
+
+      <section id="press">
+        <div class="section-heading"><h2>Selected Press Coverage</h2></div>
+        <ul class="press-list two-column">
+          <li>
+            <span class="press-source">MIT News</span> — Anticipating others’
+            behavior on the road.
+          </li>
+          <li>
+            <span class="press-source">Waymo Blog</span> — VectorNet: Predicting
+            behavior to help the Waymo Driver make better decisions.
+          </li>
+          <li>
+            <span class="press-source">MIT News</span> — An AI system for editing
+            music in videos.
+          </li>
+          <li>
+            <span class="press-source">NVIDIA Blog</span> — “Cocktail Party”
+            problem gets a round of AI.
+          </li>
+          <li>
+            <span class="press-source">MIT News</span> — Artificial intelligence
+            senses people through walls.
+          </li>
+          <li>
+            <span class="press-source">NBC, BBC, TechCrunch</span> — Through-wall
+            human sensing and pose estimation.
+          </li>
+          <li>
+            <span class="press-source">MIT News, NBC, Boston Globe, SPIE</span> —
+            A camera that never overexposes.
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <div class="section-heading">
+          <h2>Publications</h2>
+          <span class="section-note">
+            <a href="https://scholar.google.com/citations?user=DmahiOYAAAAJ"
+              >Google Scholar</a
+            >
+          </span>
+        </div>
+        <ol class="publication-list" start="87">
+          <li value="87">Galaxea Team, G0.5: One Autoregressive Stream for Reasoning and Action, Technical Report 2026 <a class="paper-link" href="https://opengalaxea.github.io/G05/Galaxea_G0_5.pdf" target="_blank" rel="noopener">Paper</a></li>
+          <li value="86">Tianyuan Yuan, Zibin Dong, Yicheng Liu, <strong>Hang Zhao</strong>, Fast-WAM: Do World Action Models Need Test-time Future Imagination?, Preprint 2026 <a class="paper-link" href="https://arxiv.org/abs/2603.16666" target="_blank" rel="noopener">Paper</a></li>
+          <li value="85">Ziwen Zhuang*, Shaoting Zhu*, Mengjie Zhao, <strong>Hang Zhao</strong>, Deep Whole-body Parkour, Preprint 2026 <a class="paper-link" href="https://arxiv.org/abs/2601.07701" target="_blank" rel="noopener">Paper</a></li>
+          <li value="84">Ziwen Zhuang, Shenzhe Yao, <strong>Hang Zhao</strong>, Humanoid Parkour Learning, CoRL 2024 <a class="paper-link" href="https://arxiv.org/abs/2406.10759" target="_blank" rel="noopener">Paper</a></li>
+          <li value="83">Xiaoyu Tian*, Junru Gu*, Bailin Li*, Yicheng Liu*, Yang Wang, Zhiyong Zhao, Kun Zhan, Peng Jia, Xianpeng Lang, <strong>Hang Zhao</strong>, DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models, CoRL 2024 <a class="paper-link" href="https://arxiv.org/abs/2402.12289" target="_blank" rel="noopener">Paper</a></li>
+          <li value="82">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong>, Uncertainty-Aware Decision Transformer for Stochastic Driving Environments, CoRL 2024 <a class="paper-link" href="https://openreview.net/pdf?id=LiwdXkMsDv" target="_blank" rel="noopener">Paper</a></li>
+          <li value="81">Xinhao Liu, Moonjun Gong, Qi Fang, Haoyu Xie, Yiming Li, <strong>Hang Zhao</strong>, Chen Feng, LiDAR-Based 4D Occupancy Completion and Forecasting , IROS 2024 <a class="paper-link" href="https://arxiv.org/abs/2310.11239" target="_blank" rel="noopener">Paper</a></li>
+          <li value="80">Yiming Li*, Sihang Li*, Xinhao Liu*, Moonjun Gong*, Kenan Li, Nuo Chen, Zijun Wang, Zhiheng Li, Tao Jiang, Fisher Yu, Yue Wang, <strong>Hang Zhao</strong>, Zhiding Yu, Chen Feng, SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving, IROS 2024 <a class="paper-link" href="https://arxiv.org/abs/2306.09001" target="_blank" rel="noopener">Paper</a></li>
+          <li value="79">Tianyuan Yuan, Yucheng Mao, Jiawei Yang, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong>, PreSight: Enhancing Autonomous Vehicle Perception with City-Scale NeRF Priors, ECCV 2024 <a class="paper-link" href="https://arxiv.org/abs/2403.09079" target="_blank" rel="noopener">Paper</a></li>
+          <li value="78">Zhangchen Ye*, Tao Jiang*, Chenfeng Xu, Yiming Li, <strong>Hang Zhao</strong>, CVT-Occ: Cost Volume Temporal Fusion for 3D Occupancy Prediction, ECCV 2024 <a class="paper-link" href="https://arxiv.org/abs/2409.13430" target="_blank" rel="noopener">Paper</a></li>
+          <li value="77">Anna Min, Chenxu Hu, Yi Ren, <strong>Hang Zhao</strong>, A Unit-based System and Dataset for Expressive Direct Speech-to-Speech Translation, Interspeech 2024</li>
+          <li value="76">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong>, Boosting offline reinforcement learning for autonomous driving with hierarchical latent skills, ICRA 2024 <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10611197" target="_blank" rel="noopener">Paper</a></li>
+          <li value="75">Simian Luo*, Yiqin Tan*, Longbo Huang†, Jian Li†, <strong>Hang Zhao</strong>†, Latent Consistency Models: Synthesizing High-Resolution Images With Few-Step Inference, Preprint <a class="paper-link" href="https://arxiv.org/abs/2310.04378" target="_blank" rel="noopener">Paper</a></li>
+          <li value="74">Tianyuan Yuan, Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, StreamMapNet: Streaming mapping network for vectorized online hd map construction, WACV 2024 <a class="paper-link" href="https://arxiv.org/abs/2308.12570" target="_blank" rel="noopener">Paper</a></li>
+          <li value="73">Ziwen Zhuang, Zipeng Fu, Jianren Wang, Christopher G Atkeson, Sören Schwertfeger, Chelsea Finn, <strong>Hang Zhao</strong>, Robot Parkour Learning, CoRL 2023 Best System Paper Finalist (Top3) <a class="paper-link" href="https://robot-parkour.github.io/resources/Robot_Parkour_Learning.pdf" target="_blank" rel="noopener">Paper</a></li>
+          <li value="72">Liangtao Zheng, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong>, Cross-dataset Sensor Alignment: Making Visual 3D Object Detector Generalize, CoRL 2023 <a class="paper-link" href="https://openreview.net/pdf?id=dIgCPoy8E3" target="_blank" rel="noopener">Paper</a></li>
+          <li value="71">Tong Zhang, Yingdong Hu, Hanchen Cui, <strong>Hang Zhao</strong>, Yang Gao, A Universal Semantic-Geometric Representation for Robotic Manipulation, CoRL 2023 <a class="paper-link" href="https://openreview.net/pdf?id=AIgm8ZE_DlD" target="_blank" rel="noopener">Paper</a></li>
+          <li value="70">Simian Luo, Chuanhao Yan, Chenxu Hu, <strong>Hang Zhao</strong>, Diff-Foley: Synchronized Video-to-Audio Synthesis with Latent Diffusion Models, NeurIPS 2023 <a class="paper-link" href="https://arxiv.org/abs/2306.17203" target="_blank" rel="noopener">Paper</a></li>
+          <li value="69">Xiaoyu Tian*, Tao Jiang*, Longfei Yun, Yucheng Mao, Huitong Yang, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for Autonomous Driving, NeurIPS 2023 <a class="paper-link" href="https://arxiv.org/abs/2304.14365" target="_blank" rel="noopener">Paper</a></li>
+          <li value="68">Bowen Li, Ziyuan Huang, Junjie Ye, Yiming Li, Sebastian Scherer, <strong>Hang Zhao</strong>, Changhong Fu, PVT++: A Simple End-to-End Latency-Aware Visual Tracking Framework, ICCV 2023 <a class="paper-link" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Li_PVT_A_Simple_End-to-End_Latency-Aware_Visual_Tracking_Framework_ICCV_2023_paper.pdf" target="_blank" rel="noopener">Paper</a></li>
+          <li value="67">Zhijie Yan, et al., INT2: Interactive Trajectory Prediction at Intersections, ICCV 2023 <a class="paper-link" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yan_INT2_Interactive_Trajectory_Prediction_at_Intersections_ICCV_2023_paper.pdf" target="_blank" rel="noopener">Paper</a></li>
+          <li value="66">Chenxu Hu*, Jie Fu*†, Chenzhuang Du, Simian Luo, Junbo Zhao, <strong>Hang Zhao</strong>†, ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory, LLM@IJCAI 2023</li>
+          <li value="65">Qiao Sun, Xin Huang, Brian C. Williams, <strong>Hang Zhao</strong>, P4P: Conflict-Aware Motion Prediction for Planning in Autonomous Driving, IROS 2023</li>
+          <li value="64">Zitian Tang, Wenjie Ye, Wei-Chiu Ma, <strong>Hang Zhao</strong>, What Happened 3 Seconds Ago? Inferring the Past with Thermal Imaging, CVPR 2023</li>
+          <li value="63">Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong>, Neural Map Prior for Autonomous Driving, CVPR 2023</li>
+          <li value="62">Junru Gu*, Chenxu Hu*, Tianyuan Zhang, Xuanyao Chen, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong>, ViP3D: End-to-end Visual Trajectory Prediction via 3D Agent Queries, CVPR 2023</li>
+          <li value="61">Xiaoyu Tian, Haoxi Ran, Yue Wang, <strong>Hang Zhao</strong>, GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training, CVPR 2023</li>
+          <li value="60">Xuanyao Chen, Zhijian Liu, Haotian Tang, Li Yi, <strong>Hang Zhao</strong>, Song Han, SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer, CVPR 2023</li>
+          <li value="59">Zihui Xue, Zhengqi Gao, Sucheng Ren, <strong>Hang Zhao</strong>, The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation, ICLR 2023 Oral Top 5% <a class="paper-link" href="https://openreview.net/pdf?id=w0QXrZ3N-s" target="_blank" rel="noopener">Paper</a></li>
+          <li value="58">Renhao Wang, Jiayuan Mao, Joy Hsu, <strong>Hang Zhao</strong>, Jiajun Wu, Yang Gao, Programmatically Grounded, Compositionally Generalizable Robotic Manipulation, ICLR 2023 Oral Top 25%</li>
+          <li value="57">Tianyu Hua, Yonglong Tian, Sucheng Ren, Michalis Raptis, <strong>Hang Zhao</strong>, Leonid Sigal, Self-supervision through Random Segments with Autoregressive Coding (RandSAC), ICLR 2023</li>
+          <li value="56">Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, VectorMapNet: End-to-end Vectorized HD Map Learning, ICML 2023</li>
+          <li value="55">Qiao Sun, Xin Huang, Brian C Williams, <strong>Hang Zhao</strong>, InterSim: Interactive Traffic Simulation via Explicit Relation Modeling, IROS 2022</li>
+          <li value="54">Renhao Wang, <strong>Hang Zhao</strong>, Yang Gao, CYBORGS: Contrastively Bootstrapping Object Representations by Grounding in Segmentation, ECCV 2022</li>
+          <li value="53">Tingle Li, Yichen Liu, Andrew Owens, <strong>Hang Zhao</strong>, Learning Visual Styles from Audio-Visual Associations, ECCV 2022</li>
+          <li value="52">Running Zhao, Jiangtao Yu, Tingle Li, <strong>Hang Zhao</strong>, Edith Ngai, Radio2Speech: High Quality Speech Recovery from Radio Frequency Signals, INTERSPEECH 2022</li>
+          <li value="51">Zui Chen, Yansen Jing, Shengcheng Yuan, Yifei Xu, Jian Wu, <strong>Hang Zhao</strong>, Sound2Synth: Interpreting Sound via FM Synthesizer Parameters Estimation, IJCAI 2022</li>
+          <li value="50">Zehui Chen, Zhenyu Li, Shiquan Zhang, Liangji Fang, Qinghong Jiang, Feng Zhao, Bolei Zhou, <strong>Hang Zhao</strong>, AutoAlign: Pixel-Instance Feature Aggregation for Multi-Modal 3D Object Detection, IJCAI 2022</li>
+          <li value="49">Tianyuan Zhang, Xuanyao Chen, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, MUTR3D: A Multi-camera Tracking Framework via 3D-to-2D Queries, CVPR Workshop on Autonomous Driving 2022</li>
+          <li value="48">Qiao Sun, Xin Huang, Junru Gu, Brian C Williams, <strong>Hang Zhao</strong>, M2I: From Factored Marginal Trajectory Prediction to Interactive Prediction, CVPR 2022</li>
+          <li value="47">Sucheng Ren, Zhengqi Gao, Tianyu Hua, Zihui Xue, Yonglong Tian, Shengfeng He, <strong>Hang Zhao</strong>, Co-advise: Cross Inductive Bias Distillation, CVPR 2022</li>
+          <li value="46">Lue Fan, Ziqi Pang, Tianyuan Zhang, Yu-Xiong Wang, <strong>Hang Zhao</strong>, Feng Wang, Naiyan Wang, Zhaoxiang Zhang, Embracing Single Stride 3D Object Detector with Sparse Transformer, CVPR 2022</li>
+          <li value="45">Yiming Li, Ziang Cao, Andrew Liang, Benjamin Liang, Luoyao Chen, <strong>Hang Zhao</strong>, Chen Feng, Egocentric Prediction of Action Target in 3D, CVPR 2022</li>
+          <li value="44">Qi Li, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, HDMapNet: An Online HD Map Construction and Evaluation Framework, ICRA 2022, CVPR 2021 Workshop best paper nominee</li>
+          <li value="43">Jianren Wang*, Ziwen Zhuang*, <strong>Hang Zhao</strong>, SEMI: Self-supervised Exploration via Multisensory Incongruity, ICRA 2022</li>
+          <li value="42">Longlong Jing, Ruichi Yu, Henrik Kretzschmar, Kang Li, Ruizhongtai Qi, <strong>Hang Zhao</strong>, Alper Ayvaci, Xu Chen, Dillon Cower, Yingwei Li, Yurong You, Han Deng, Congcong Li, Dragomir Anguelov, Depth Estimation Matters Most: Improving Per-Object Depth Estimation for Monocular 3D Detection and Tracking, ICRA 2022</li>
+          <li value="41">Yue Zhao, Chenzhuang Du, <strong>Hang Zhao</strong>, Tiejun Li, Intrinsically Motivated Self-supervised Learning in Reinforcement Learning, ICRA 2022</li>
+          <li value="40">Yingwei Li, Tiffany Chen, Maya Kabkab, Ruichi Yu, Longlong Jing, Yurong You, <strong>Hang Zhao</strong>, R4D: Utilizing Reference Objects for Long-Range Distance Estimation, ICLR 2022</li>
+          <li value="39">Qi Li, Kaichun Mo, Yanchao Yang, <strong>Hang Zhao</strong>, Leonidas Guibas, IFR-Explore: Learning Inter-object Functional Relationships in 3D Indoor Scenes, ICLR 2022</li>
+          <li value="38">Zhenyu Li, Zehui Chen, Ang Li, Liangji Fang, Qinhong Jiang, Xianming Liu, Junjun Jiang, Bolei Zhou, <strong>Hang Zhao</strong>, SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations, AAAI 2022</li>
+          <li value="37">Chenxu Hu, Qiao Tian, Tingle Li, Yuping Wang, Yuxuan Wang, <strong>Hang Zhao</strong>, Neural Dubber: Dubbing for Videos According to Scripts, NeurIPS 2021</li>
+          <li value="36">Yu Huang, Chenzhuang Du, Zihui Xue, Xuanyao Chen, <strong>Hang Zhao</strong>, Longbo Huang, What Makes Multi-Modal Learning Better than Single (Provably), NeurIPS 2021</li>
+          <li value="35">Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang, <strong>Hang Zhao</strong>, Justin Solomon, DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries, CoRL 2021</li>
+          <li value="34">Jianren Wang, Ziwen Zhuang, Yuyang Wang, <strong>Hang Zhao</strong>, Adversarially Robust Imitation Learning, CoRL 2021</li>
+          <li value="33">Xiaosong Jia, Liting Sun, <strong>Hang Zhao</strong>, Masayoshi Tomizuka, Wei Zhan, Multi-Agent Trajectory Prediction by Combining Egocentric and Allocentric Views, CoRL 2021</li>
+          <li value="32">Tianyu Hua, Wenxiao Wang, Zihui Xue, Yue Wang, Sucheng Ren, <strong>Hang Zhao</strong>, On Feature Decorrelation in Self-Supervised Learning, ICCV 2021 Oral</li>
+          <li value="31">Scott Ettinger, Shuyang Cheng, Benjamin Caine, Chenxi Liu, <strong>Hang Zhao</strong>, Sabeek Pradhan, Yuning Chai, Ben Sapp, Charles Qi, Yin Zhou, Zoey Yang, Aurelien Chouard, Pei Sun, Jiquan Ngiam, Vijay Vasudevan, Alexander McCauley, Jonathon Shlens, Dragomir Anguelov, Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset, ICCV 2021 Oral</li>
+          <li value="30">Zihui Xue, Sucheng Ren, Zhengqi Gao, <strong>Hang Zhao</strong>, Multimodal Knowledge Expansion, ICCV 2021</li>
+          <li value="29">Junru Gu, Chen Sun, <strong>Hang Zhao</strong>, DenseTNT: End-to-end Trajectory Prediction from Dense Goal Sets, ICCV 2021</li>
+          <li value="28">Junru Gu, Qiao Sun, <strong>Hang Zhao</strong>, DenseTNT: Waymo Open Dataset Motion Prediction Challenge 1st Place Solution, CVPR 2021 Workshop, Waymo Open Dataset Challenge Winner</li>
+          <li value="27">Tingle Li, Yichen Liu, Chenxu Hu, <strong>Hang Zhao</strong>, CVC: Contrastive Learning for Non-parallel Voice Conversion, Interspeech 2021 (ISCA travel grant award)</li>
+          <li value="26">Lu Mi, <strong>Hang Zhao</strong>, Charlie Nash, Xiaohan Jin, Jiyang Gao, Chen Sun, Cordelia Schmid, Nir Shavit, Yuning Chai, Dragomir Anguelov, HDMapGen: A Hierarchical Graph Generative Model of High Definition Maps, CVPR 2021</li>
+          <li value="25"><strong>Hang Zhao</strong>*, Jiyang Gao*, Tian Lan, Chen Sun, Benjamin Sapp, Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai, Cordelia Schmid, Congcong Li, Dragomir Anguelov, TNT: Target-driveN Trajectory Prediction, CoRL 2020</li>
+          <li value="24">Jianren Wang, Yujie Lu, <strong>Hang Zhao</strong>, CLOUD: Contrastive Learning of Unsupervised Dynamics, CoRL 2020</li>
+          <li value="23">Hanhan Li, Ariel Gordon, <strong>Hang Zhao</strong>, Vincent Casser, Anelia Angelova, Unsupervised Monocular Depth Learning in Dynamic Scenes, CoRL 2020</li>
+          <li value="22">Chu Zhou, <strong>Hang Zhao</strong>, Jin Han, Chang Xu, Chao Xu, Tiejun Huang, Boxin Shi, UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging, NeuRIPS 2020</li>
+          <li value="21">Jiyang Gao, Chen Sun, <strong>Hang Zhao</strong>, Yi Shen, Dragomir Anguelov, Congcong Li, Cordelia Schmid, VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized Representation, CVPR 2020</li>
+          <li value="20">Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou, Yuning Chai, Benjamin Caine, Vijay Vasudevan, Wei Han, Jiquan Ngiam, <strong>Hang Zhao</strong>, Aleksei Timofeev, Scott Ettinger, Maxim Krivokon, Amy Gao, Aditya Joshi, Sheng Zhao, Shuyang Cheng, Yu Zhang, Jonathon Shlens, Zhifeng Chen, Dragomir Anguelov, Scalability in Perception for Autonomous Driving: Waymo Open Dataset, CVPR 2020</li>
+          <li value="19">Chuang Gan, Deng Huang, <strong>Hang Zhao</strong>, Joshua B Tenenbaum, Antonio Torralba, Music Gesture for Visual Sound Separation, CVPR 2020</li>
+          <li value="18">Jianren Wang, Zhaoyuan Fang, <strong>Hang Zhao</strong>, AlignNet: A Unifying Approach to Audio-visual Alignment, WACV 2020</li>
+          <li value="17"><strong>Hang Zhao</strong>, Chuang Gan, Wei-Chiu Ma, Antonio Torralba, The Sound of Motions, ICCV 2019</li>
+          <li value="16">Chuang Gan, <strong>Hang Zhao</strong>, Peihao Chen, David Cox, Antonio Torralba, Self-supervised Moving Vehicle Tracking with Stereo Sound, ICCV 2019</li>
+          <li value="15">Mingmin Zhao, Yingcheng Liu, Aniruddh Raghu, <strong>Hang Zhao</strong>, Tianhong Li, Antonio Torralba, Dina Katabi, Through-Wall Human Mesh Recovery Using Radio Signals, ICCV 2019</li>
+          <li value="14"><strong>Hang Zhao</strong>, Zhicheng Yan, Lorenzo Torresani, Antonio Torralba, HACS: Human Action Clips and Segments Dataset for Recognition and Temporal Localization, ICCV 2019</li>
+          <li value="13">Andrew Rouditchenko*, <strong>Hang Zhao</strong>*, Chuang Gan, Josh McDermott, Antonio Torralba, Self-Supervised Audio-visual Co-segmentation, ICASSP 2019</li>
+          <li value="12"><strong>Hang Zhao</strong>, Chuang Gan, Andrew Rouditchenko, Carl Vondrick, Josh McDermott, Antonio Torralba, The Sound of Pixels, ECCV 2018</li>
+          <li value="11">Mingmin Zhao, Yonglong Tian, <strong>Hang Zhao</strong>, Mohammad Alsheikh, Tianhong Li, Rumen Hristov, Zachary Kabelac, Dina Katabi, Antonio Torralba, RF-Based 3D Skeletons, SIGCOMM 2018</li>
+          <li value="10">Mingmin Zhao, Tianhong Li, Mohammad Alsheikh, Yonglong Tian, <strong>Hang Zhao</strong>, Antonio Torralba, Dina Katabi, Through-Wall Human Pose Estimation Using Radio Signals, CVPR 2018</li>
+          <li value="9">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Tete Xiao, Sanja Fidler, Adela Barriuso, Antonio Torralba, Semantic Understanding of Scenes through the ADE20K Dataset, IJCV 2018</li>
+          <li value="8"><strong>Hang Zhao</strong>, Xavier Puig, Bolei Zhou, Sanja Fidler, Antonio Torralba, Open Vocabulary Scene Parsing, ICCV 2017</li>
+          <li value="7">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Sanja Fidler, Adela Barriuso, Antonio Torralba, Scene Parsing through ADE20K Dataset, CVPR 2017</li>
+          <li value="6"><strong>Hang Zhao</strong>, Orazio Gallo, Iuri Frosio and Jan Kautz, Loss Functions for Neural Networks for Image Processing, IEEE TCI 2017</li>
+          <li value="5">Liam Paul, et al., Duckietown: an Open, Inexpensive and Flexible Platform for Autonomy Education and Research, ICRA 2017</li>
+          <li value="4"><strong>Hang Zhao</strong>, Boxin Shi, Christy Fernandez-Cull, Sai-Kit Yeung and Ramesh Raskar, Unbounded High Dynamic Range Photography using a Modulo Camera, ICCP 2015 Best Paper Runner-up</li>
+          <li value="3">Christy Fernandez-Cull, <strong>Hang Zhao</strong>, Boxin Shi, Brian M. Tyrrell, Joseph Lin and Ramesh Raskar, Snapshot on-chip HDR ROIC architectures, COSI 2015</li>
+          <li value="2">Achuta Kadambi, <strong>Hang Zhao</strong>, Boxin Shi and Ramesh Raskar, Occluded imaging with time of flight sensors, ACM Transactions on Graphics 2015</li>
+          <li value="1">Boxin Shi, <strong>Hang Zhao</strong>, Moshe Ben-Ezra, Sai-Kit Yeung, Christy Fernandez-Cull, R. Hamilton Shepard, Christopher Barsi, Ramesh Raskar, Sub-pixel layout for super-resolution with images in an octic group, ECCV 2014</li>
+        </ol>
+        <p class="legend">
+          * Equal contribution. † Corresponding author. Publication list
+          incorporates the February 2025 CV and subsequent work featured on the
+          homepage.
+        </p>
+      </section>
+
+      <section id="patents">
+        <div class="section-heading"><h2>Patents</h2></div>
+        <ol class="patent-list">
+          <li>Dina Katabi; Antonio Torralba; <strong>Hang Zhao</strong>; Mingmin Zhao; Tianhong Li; Mohammad Abualsheikh; Yonglong Tian; Pose Estimation, 2019-6-20, USA, US20190188533A1</li>
+          <li>Achuta Kadambi; <strong>Hang Zhao</strong>; Boxin Shi; Ayush Bhandari; Ramesh Raskar ; Methods and apparatus for virtual sensor array, 2018-2-20, USA, US9897699B2</li>
+          <li>Jiyang Gao; Yi Shen; <strong>Hang Zhao</strong>; Chen Sun; Agent Trajectory Prediction Using Vectorized Inputs, 2021-5-20, USA, US20210150350A1</li>
+          <li>Vincent Michael Casser; Yuning Chai; Dragomir Anguelov; <strong>Hang Zhao</strong>; Henrik Kretzschmar; Reza Mahjourian; Anelia Angelova; Ariel Gordon; Soeren Pirk; Training Perspective Computer Vision Models Using View Synthesis, 2021-12-16, USA, US20210390407A1</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      This HTML CV is designed for both screen reading and A4 printing.
+    </footer>
+  </body>
+</html>
