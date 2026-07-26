@@ -18,6 +18,7 @@
         --rule: #d9e1e8;
         --paper: #ffffff;
         --canvas: #f4f7f9;
+        --award: #b42318;
         --measure: 980px;
       }
 
@@ -297,33 +298,48 @@
         font-weight: 700;
       }
 
-      .publication-list {
-        margin: 0;
-        padding-left: 3.5em;
-      }
-
-      .publication-list li {
+      .pub {
+        display: flex;
+        gap: 12px;
         margin-bottom: 9px;
-        padding-left: 0.35em;
         break-inside: avoid;
       }
 
-      .publication-list li::marker {
+      .pub .num {
+        flex: 0 0 38px;
         color: var(--muted);
+        text-align: right;
         font-variant-numeric: tabular-nums;
       }
 
-      .paper-link {
-        display: inline-block;
-        margin-left: 5px;
-        padding: 0 6px;
-        border: 1px solid #c8d8e7;
-        border-radius: 999px;
-        font-size: 11px;
+      .pub .body {
+        flex: 1 1 auto;
+      }
+
+      .pub .authors {
+        color: var(--ink);
+      }
+
+      .pub .ptitle {
         font-weight: 700;
-        line-height: 1.55;
-        text-decoration: none;
-        text-transform: uppercase;
+      }
+
+      .venue {
+        display: inline-block;
+        margin: 2px 0;
+        padding: 1px 9px;
+        border-radius: 999px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .award {
+        color: var(--award);
+        font-size: 12.5px;
+        font-weight: 700;
       }
 
       footer {
@@ -452,9 +468,10 @@
           gap: 16px;
         }
 
-        .paper-link {
-          border: 0;
-          padding: 0;
+        .venue {
+          border: 1px solid var(--rule);
+          padding: 0 6px;
+          background: transparent;
           font-size: 8.5pt;
         }
 
@@ -839,95 +856,1434 @@
             >
           </span>
         </div>
-        <ol class="publication-list" start="87">
-          <li value="87">Galaxea Team, G0.5: One Autoregressive Stream for Reasoning and Action, Technical Report 2026 <a class="paper-link" href="https://opengalaxea.github.io/G05/Galaxea_G0_5.pdf" target="_blank" rel="noopener">Paper</a></li>
-          <li value="86">Tianyuan Yuan, Zibin Dong, Yicheng Liu, <strong>Hang Zhao</strong>, Fast-WAM: Do World Action Models Need Test-time Future Imagination?, Preprint 2026 <a class="paper-link" href="https://arxiv.org/abs/2603.16666" target="_blank" rel="noopener">Paper</a></li>
-          <li value="85">Ziwen Zhuang*, Shaoting Zhu*, Mengjie Zhao, <strong>Hang Zhao</strong>, Deep Whole-body Parkour, Preprint 2026 <a class="paper-link" href="https://arxiv.org/abs/2601.07701" target="_blank" rel="noopener">Paper</a></li>
-          <li value="84">Ziwen Zhuang, Shenzhe Yao, <strong>Hang Zhao</strong>, Humanoid Parkour Learning, CoRL 2024 <a class="paper-link" href="https://arxiv.org/abs/2406.10759" target="_blank" rel="noopener">Paper</a></li>
-          <li value="83">Xiaoyu Tian*, Junru Gu*, Bailin Li*, Yicheng Liu*, Yang Wang, Zhiyong Zhao, Kun Zhan, Peng Jia, Xianpeng Lang, <strong>Hang Zhao</strong>, DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models, CoRL 2024 <a class="paper-link" href="https://arxiv.org/abs/2402.12289" target="_blank" rel="noopener">Paper</a></li>
-          <li value="82">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong>, Uncertainty-Aware Decision Transformer for Stochastic Driving Environments, CoRL 2024 <a class="paper-link" href="https://openreview.net/pdf?id=LiwdXkMsDv" target="_blank" rel="noopener">Paper</a></li>
-          <li value="81">Xinhao Liu, Moonjun Gong, Qi Fang, Haoyu Xie, Yiming Li, <strong>Hang Zhao</strong>, Chen Feng, LiDAR-Based 4D Occupancy Completion and Forecasting , IROS 2024 <a class="paper-link" href="https://arxiv.org/abs/2310.11239" target="_blank" rel="noopener">Paper</a></li>
-          <li value="80">Yiming Li*, Sihang Li*, Xinhao Liu*, Moonjun Gong*, Kenan Li, Nuo Chen, Zijun Wang, Zhiheng Li, Tao Jiang, Fisher Yu, Yue Wang, <strong>Hang Zhao</strong>, Zhiding Yu, Chen Feng, SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving, IROS 2024 <a class="paper-link" href="https://arxiv.org/abs/2306.09001" target="_blank" rel="noopener">Paper</a></li>
-          <li value="79">Tianyuan Yuan, Yucheng Mao, Jiawei Yang, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong>, PreSight: Enhancing Autonomous Vehicle Perception with City-Scale NeRF Priors, ECCV 2024 <a class="paper-link" href="https://arxiv.org/abs/2403.09079" target="_blank" rel="noopener">Paper</a></li>
-          <li value="78">Zhangchen Ye*, Tao Jiang*, Chenfeng Xu, Yiming Li, <strong>Hang Zhao</strong>, CVT-Occ: Cost Volume Temporal Fusion for 3D Occupancy Prediction, ECCV 2024 <a class="paper-link" href="https://arxiv.org/abs/2409.13430" target="_blank" rel="noopener">Paper</a></li>
-          <li value="77">Anna Min, Chenxu Hu, Yi Ren, <strong>Hang Zhao</strong>, A Unit-based System and Dataset for Expressive Direct Speech-to-Speech Translation, Interspeech 2024</li>
-          <li value="76">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong>, Boosting offline reinforcement learning for autonomous driving with hierarchical latent skills, ICRA 2024 <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/10611197" target="_blank" rel="noopener">Paper</a></li>
-          <li value="75">Simian Luo*, Yiqin Tan*, Longbo Huang†, Jian Li†, <strong>Hang Zhao</strong>†, Latent Consistency Models: Synthesizing High-Resolution Images With Few-Step Inference, Preprint <a class="paper-link" href="https://arxiv.org/abs/2310.04378" target="_blank" rel="noopener">Paper</a></li>
-          <li value="74">Tianyuan Yuan, Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, StreamMapNet: Streaming mapping network for vectorized online hd map construction, WACV 2024 <a class="paper-link" href="https://arxiv.org/abs/2308.12570" target="_blank" rel="noopener">Paper</a></li>
-          <li value="73">Ziwen Zhuang, Zipeng Fu, Jianren Wang, Christopher G Atkeson, Sören Schwertfeger, Chelsea Finn, <strong>Hang Zhao</strong>, Robot Parkour Learning, CoRL 2023 Best System Paper Finalist (Top3) <a class="paper-link" href="https://robot-parkour.github.io/resources/Robot_Parkour_Learning.pdf" target="_blank" rel="noopener">Paper</a></li>
-          <li value="72">Liangtao Zheng, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong>, Cross-dataset Sensor Alignment: Making Visual 3D Object Detector Generalize, CoRL 2023 <a class="paper-link" href="https://openreview.net/pdf?id=dIgCPoy8E3" target="_blank" rel="noopener">Paper</a></li>
-          <li value="71">Tong Zhang, Yingdong Hu, Hanchen Cui, <strong>Hang Zhao</strong>, Yang Gao, A Universal Semantic-Geometric Representation for Robotic Manipulation, CoRL 2023 <a class="paper-link" href="https://openreview.net/pdf?id=AIgm8ZE_DlD" target="_blank" rel="noopener">Paper</a></li>
-          <li value="70">Simian Luo, Chuanhao Yan, Chenxu Hu, <strong>Hang Zhao</strong>, Diff-Foley: Synchronized Video-to-Audio Synthesis with Latent Diffusion Models, NeurIPS 2023 <a class="paper-link" href="https://arxiv.org/abs/2306.17203" target="_blank" rel="noopener">Paper</a></li>
-          <li value="69">Xiaoyu Tian*, Tao Jiang*, Longfei Yun, Yucheng Mao, Huitong Yang, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for Autonomous Driving, NeurIPS 2023 <a class="paper-link" href="https://arxiv.org/abs/2304.14365" target="_blank" rel="noopener">Paper</a></li>
-          <li value="68">Bowen Li, Ziyuan Huang, Junjie Ye, Yiming Li, Sebastian Scherer, <strong>Hang Zhao</strong>, Changhong Fu, PVT++: A Simple End-to-End Latency-Aware Visual Tracking Framework, ICCV 2023 <a class="paper-link" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Li_PVT_A_Simple_End-to-End_Latency-Aware_Visual_Tracking_Framework_ICCV_2023_paper.pdf" target="_blank" rel="noopener">Paper</a></li>
-          <li value="67">Zhijie Yan, et al., INT2: Interactive Trajectory Prediction at Intersections, ICCV 2023 <a class="paper-link" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Yan_INT2_Interactive_Trajectory_Prediction_at_Intersections_ICCV_2023_paper.pdf" target="_blank" rel="noopener">Paper</a></li>
-          <li value="66">Chenxu Hu*, Jie Fu*†, Chenzhuang Du, Simian Luo, Junbo Zhao, <strong>Hang Zhao</strong>†, ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory, LLM@IJCAI 2023</li>
-          <li value="65">Qiao Sun, Xin Huang, Brian C. Williams, <strong>Hang Zhao</strong>, P4P: Conflict-Aware Motion Prediction for Planning in Autonomous Driving, IROS 2023</li>
-          <li value="64">Zitian Tang, Wenjie Ye, Wei-Chiu Ma, <strong>Hang Zhao</strong>, What Happened 3 Seconds Ago? Inferring the Past with Thermal Imaging, CVPR 2023</li>
-          <li value="63">Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong>, Neural Map Prior for Autonomous Driving, CVPR 2023</li>
-          <li value="62">Junru Gu*, Chenxu Hu*, Tianyuan Zhang, Xuanyao Chen, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong>, ViP3D: End-to-end Visual Trajectory Prediction via 3D Agent Queries, CVPR 2023</li>
-          <li value="61">Xiaoyu Tian, Haoxi Ran, Yue Wang, <strong>Hang Zhao</strong>, GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training, CVPR 2023</li>
-          <li value="60">Xuanyao Chen, Zhijian Liu, Haotian Tang, Li Yi, <strong>Hang Zhao</strong>, Song Han, SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer, CVPR 2023</li>
-          <li value="59">Zihui Xue, Zhengqi Gao, Sucheng Ren, <strong>Hang Zhao</strong>, The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation, ICLR 2023 Oral Top 5% <a class="paper-link" href="https://openreview.net/pdf?id=w0QXrZ3N-s" target="_blank" rel="noopener">Paper</a></li>
-          <li value="58">Renhao Wang, Jiayuan Mao, Joy Hsu, <strong>Hang Zhao</strong>, Jiajun Wu, Yang Gao, Programmatically Grounded, Compositionally Generalizable Robotic Manipulation, ICLR 2023 Oral Top 25%</li>
-          <li value="57">Tianyu Hua, Yonglong Tian, Sucheng Ren, Michalis Raptis, <strong>Hang Zhao</strong>, Leonid Sigal, Self-supervision through Random Segments with Autoregressive Coding (RandSAC), ICLR 2023</li>
-          <li value="56">Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, VectorMapNet: End-to-end Vectorized HD Map Learning, ICML 2023</li>
-          <li value="55">Qiao Sun, Xin Huang, Brian C Williams, <strong>Hang Zhao</strong>, InterSim: Interactive Traffic Simulation via Explicit Relation Modeling, IROS 2022</li>
-          <li value="54">Renhao Wang, <strong>Hang Zhao</strong>, Yang Gao, CYBORGS: Contrastively Bootstrapping Object Representations by Grounding in Segmentation, ECCV 2022</li>
-          <li value="53">Tingle Li, Yichen Liu, Andrew Owens, <strong>Hang Zhao</strong>, Learning Visual Styles from Audio-Visual Associations, ECCV 2022</li>
-          <li value="52">Running Zhao, Jiangtao Yu, Tingle Li, <strong>Hang Zhao</strong>, Edith Ngai, Radio2Speech: High Quality Speech Recovery from Radio Frequency Signals, INTERSPEECH 2022</li>
-          <li value="51">Zui Chen, Yansen Jing, Shengcheng Yuan, Yifei Xu, Jian Wu, <strong>Hang Zhao</strong>, Sound2Synth: Interpreting Sound via FM Synthesizer Parameters Estimation, IJCAI 2022</li>
-          <li value="50">Zehui Chen, Zhenyu Li, Shiquan Zhang, Liangji Fang, Qinghong Jiang, Feng Zhao, Bolei Zhou, <strong>Hang Zhao</strong>, AutoAlign: Pixel-Instance Feature Aggregation for Multi-Modal 3D Object Detection, IJCAI 2022</li>
-          <li value="49">Tianyuan Zhang, Xuanyao Chen, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, MUTR3D: A Multi-camera Tracking Framework via 3D-to-2D Queries, CVPR Workshop on Autonomous Driving 2022</li>
-          <li value="48">Qiao Sun, Xin Huang, Junru Gu, Brian C Williams, <strong>Hang Zhao</strong>, M2I: From Factored Marginal Trajectory Prediction to Interactive Prediction, CVPR 2022</li>
-          <li value="47">Sucheng Ren, Zhengqi Gao, Tianyu Hua, Zihui Xue, Yonglong Tian, Shengfeng He, <strong>Hang Zhao</strong>, Co-advise: Cross Inductive Bias Distillation, CVPR 2022</li>
-          <li value="46">Lue Fan, Ziqi Pang, Tianyuan Zhang, Yu-Xiong Wang, <strong>Hang Zhao</strong>, Feng Wang, Naiyan Wang, Zhaoxiang Zhang, Embracing Single Stride 3D Object Detector with Sparse Transformer, CVPR 2022</li>
-          <li value="45">Yiming Li, Ziang Cao, Andrew Liang, Benjamin Liang, Luoyao Chen, <strong>Hang Zhao</strong>, Chen Feng, Egocentric Prediction of Action Target in 3D, CVPR 2022</li>
-          <li value="44">Qi Li, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong>, HDMapNet: An Online HD Map Construction and Evaluation Framework, ICRA 2022, CVPR 2021 Workshop best paper nominee</li>
-          <li value="43">Jianren Wang*, Ziwen Zhuang*, <strong>Hang Zhao</strong>, SEMI: Self-supervised Exploration via Multisensory Incongruity, ICRA 2022</li>
-          <li value="42">Longlong Jing, Ruichi Yu, Henrik Kretzschmar, Kang Li, Ruizhongtai Qi, <strong>Hang Zhao</strong>, Alper Ayvaci, Xu Chen, Dillon Cower, Yingwei Li, Yurong You, Han Deng, Congcong Li, Dragomir Anguelov, Depth Estimation Matters Most: Improving Per-Object Depth Estimation for Monocular 3D Detection and Tracking, ICRA 2022</li>
-          <li value="41">Yue Zhao, Chenzhuang Du, <strong>Hang Zhao</strong>, Tiejun Li, Intrinsically Motivated Self-supervised Learning in Reinforcement Learning, ICRA 2022</li>
-          <li value="40">Yingwei Li, Tiffany Chen, Maya Kabkab, Ruichi Yu, Longlong Jing, Yurong You, <strong>Hang Zhao</strong>, R4D: Utilizing Reference Objects for Long-Range Distance Estimation, ICLR 2022</li>
-          <li value="39">Qi Li, Kaichun Mo, Yanchao Yang, <strong>Hang Zhao</strong>, Leonidas Guibas, IFR-Explore: Learning Inter-object Functional Relationships in 3D Indoor Scenes, ICLR 2022</li>
-          <li value="38">Zhenyu Li, Zehui Chen, Ang Li, Liangji Fang, Qinhong Jiang, Xianming Liu, Junjun Jiang, Bolei Zhou, <strong>Hang Zhao</strong>, SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations, AAAI 2022</li>
-          <li value="37">Chenxu Hu, Qiao Tian, Tingle Li, Yuping Wang, Yuxuan Wang, <strong>Hang Zhao</strong>, Neural Dubber: Dubbing for Videos According to Scripts, NeurIPS 2021</li>
-          <li value="36">Yu Huang, Chenzhuang Du, Zihui Xue, Xuanyao Chen, <strong>Hang Zhao</strong>, Longbo Huang, What Makes Multi-Modal Learning Better than Single (Provably), NeurIPS 2021</li>
-          <li value="35">Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang, <strong>Hang Zhao</strong>, Justin Solomon, DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries, CoRL 2021</li>
-          <li value="34">Jianren Wang, Ziwen Zhuang, Yuyang Wang, <strong>Hang Zhao</strong>, Adversarially Robust Imitation Learning, CoRL 2021</li>
-          <li value="33">Xiaosong Jia, Liting Sun, <strong>Hang Zhao</strong>, Masayoshi Tomizuka, Wei Zhan, Multi-Agent Trajectory Prediction by Combining Egocentric and Allocentric Views, CoRL 2021</li>
-          <li value="32">Tianyu Hua, Wenxiao Wang, Zihui Xue, Yue Wang, Sucheng Ren, <strong>Hang Zhao</strong>, On Feature Decorrelation in Self-Supervised Learning, ICCV 2021 Oral</li>
-          <li value="31">Scott Ettinger, Shuyang Cheng, Benjamin Caine, Chenxi Liu, <strong>Hang Zhao</strong>, Sabeek Pradhan, Yuning Chai, Ben Sapp, Charles Qi, Yin Zhou, Zoey Yang, Aurelien Chouard, Pei Sun, Jiquan Ngiam, Vijay Vasudevan, Alexander McCauley, Jonathon Shlens, Dragomir Anguelov, Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset, ICCV 2021 Oral</li>
-          <li value="30">Zihui Xue, Sucheng Ren, Zhengqi Gao, <strong>Hang Zhao</strong>, Multimodal Knowledge Expansion, ICCV 2021</li>
-          <li value="29">Junru Gu, Chen Sun, <strong>Hang Zhao</strong>, DenseTNT: End-to-end Trajectory Prediction from Dense Goal Sets, ICCV 2021</li>
-          <li value="28">Junru Gu, Qiao Sun, <strong>Hang Zhao</strong>, DenseTNT: Waymo Open Dataset Motion Prediction Challenge 1st Place Solution, CVPR 2021 Workshop, Waymo Open Dataset Challenge Winner</li>
-          <li value="27">Tingle Li, Yichen Liu, Chenxu Hu, <strong>Hang Zhao</strong>, CVC: Contrastive Learning for Non-parallel Voice Conversion, Interspeech 2021 (ISCA travel grant award)</li>
-          <li value="26">Lu Mi, <strong>Hang Zhao</strong>, Charlie Nash, Xiaohan Jin, Jiyang Gao, Chen Sun, Cordelia Schmid, Nir Shavit, Yuning Chai, Dragomir Anguelov, HDMapGen: A Hierarchical Graph Generative Model of High Definition Maps, CVPR 2021</li>
-          <li value="25"><strong>Hang Zhao</strong>*, Jiyang Gao*, Tian Lan, Chen Sun, Benjamin Sapp, Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai, Cordelia Schmid, Congcong Li, Dragomir Anguelov, TNT: Target-driveN Trajectory Prediction, CoRL 2020</li>
-          <li value="24">Jianren Wang, Yujie Lu, <strong>Hang Zhao</strong>, CLOUD: Contrastive Learning of Unsupervised Dynamics, CoRL 2020</li>
-          <li value="23">Hanhan Li, Ariel Gordon, <strong>Hang Zhao</strong>, Vincent Casser, Anelia Angelova, Unsupervised Monocular Depth Learning in Dynamic Scenes, CoRL 2020</li>
-          <li value="22">Chu Zhou, <strong>Hang Zhao</strong>, Jin Han, Chang Xu, Chao Xu, Tiejun Huang, Boxin Shi, UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging, NeuRIPS 2020</li>
-          <li value="21">Jiyang Gao, Chen Sun, <strong>Hang Zhao</strong>, Yi Shen, Dragomir Anguelov, Congcong Li, Cordelia Schmid, VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized Representation, CVPR 2020</li>
-          <li value="20">Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou, Yuning Chai, Benjamin Caine, Vijay Vasudevan, Wei Han, Jiquan Ngiam, <strong>Hang Zhao</strong>, Aleksei Timofeev, Scott Ettinger, Maxim Krivokon, Amy Gao, Aditya Joshi, Sheng Zhao, Shuyang Cheng, Yu Zhang, Jonathon Shlens, Zhifeng Chen, Dragomir Anguelov, Scalability in Perception for Autonomous Driving: Waymo Open Dataset, CVPR 2020</li>
-          <li value="19">Chuang Gan, Deng Huang, <strong>Hang Zhao</strong>, Joshua B Tenenbaum, Antonio Torralba, Music Gesture for Visual Sound Separation, CVPR 2020</li>
-          <li value="18">Jianren Wang, Zhaoyuan Fang, <strong>Hang Zhao</strong>, AlignNet: A Unifying Approach to Audio-visual Alignment, WACV 2020</li>
-          <li value="17"><strong>Hang Zhao</strong>, Chuang Gan, Wei-Chiu Ma, Antonio Torralba, The Sound of Motions, ICCV 2019</li>
-          <li value="16">Chuang Gan, <strong>Hang Zhao</strong>, Peihao Chen, David Cox, Antonio Torralba, Self-supervised Moving Vehicle Tracking with Stereo Sound, ICCV 2019</li>
-          <li value="15">Mingmin Zhao, Yingcheng Liu, Aniruddh Raghu, <strong>Hang Zhao</strong>, Tianhong Li, Antonio Torralba, Dina Katabi, Through-Wall Human Mesh Recovery Using Radio Signals, ICCV 2019</li>
-          <li value="14"><strong>Hang Zhao</strong>, Zhicheng Yan, Lorenzo Torresani, Antonio Torralba, HACS: Human Action Clips and Segments Dataset for Recognition and Temporal Localization, ICCV 2019</li>
-          <li value="13">Andrew Rouditchenko*, <strong>Hang Zhao</strong>*, Chuang Gan, Josh McDermott, Antonio Torralba, Self-Supervised Audio-visual Co-segmentation, ICASSP 2019</li>
-          <li value="12"><strong>Hang Zhao</strong>, Chuang Gan, Andrew Rouditchenko, Carl Vondrick, Josh McDermott, Antonio Torralba, The Sound of Pixels, ECCV 2018</li>
-          <li value="11">Mingmin Zhao, Yonglong Tian, <strong>Hang Zhao</strong>, Mohammad Alsheikh, Tianhong Li, Rumen Hristov, Zachary Kabelac, Dina Katabi, Antonio Torralba, RF-Based 3D Skeletons, SIGCOMM 2018</li>
-          <li value="10">Mingmin Zhao, Tianhong Li, Mohammad Alsheikh, Yonglong Tian, <strong>Hang Zhao</strong>, Antonio Torralba, Dina Katabi, Through-Wall Human Pose Estimation Using Radio Signals, CVPR 2018</li>
-          <li value="9">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Tete Xiao, Sanja Fidler, Adela Barriuso, Antonio Torralba, Semantic Understanding of Scenes through the ADE20K Dataset, IJCV 2018</li>
-          <li value="8"><strong>Hang Zhao</strong>, Xavier Puig, Bolei Zhou, Sanja Fidler, Antonio Torralba, Open Vocabulary Scene Parsing, ICCV 2017</li>
-          <li value="7">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Sanja Fidler, Adela Barriuso, Antonio Torralba, Scene Parsing through ADE20K Dataset, CVPR 2017</li>
-          <li value="6"><strong>Hang Zhao</strong>, Orazio Gallo, Iuri Frosio and Jan Kautz, Loss Functions for Neural Networks for Image Processing, IEEE TCI 2017</li>
-          <li value="5">Liam Paul, et al., Duckietown: an Open, Inexpensive and Flexible Platform for Autonomy Education and Research, ICRA 2017</li>
-          <li value="4"><strong>Hang Zhao</strong>, Boxin Shi, Christy Fernandez-Cull, Sai-Kit Yeung and Ramesh Raskar, Unbounded High Dynamic Range Photography using a Modulo Camera, ICCP 2015 Best Paper Runner-up</li>
-          <li value="3">Christy Fernandez-Cull, <strong>Hang Zhao</strong>, Boxin Shi, Brian M. Tyrrell, Joseph Lin and Ramesh Raskar, Snapshot on-chip HDR ROIC architectures, COSI 2015</li>
-          <li value="2">Achuta Kadambi, <strong>Hang Zhao</strong>, Boxin Shi and Ramesh Raskar, Occluded imaging with time of flight sensors, ACM Transactions on Graphics 2015</li>
-          <li value="1">Boxin Shi, <strong>Hang Zhao</strong>, Moshe Ben-Ezra, Sai-Kit Yeung, Christy Fernandez-Cull, R. Hamilton Shepard, Christopher Barsi, Ramesh Raskar, Sub-pixel layout for super-resolution with images in an octic group, ECCV 2014</li>
-        </ol>
+        <div class="pub">
+          <div class="num">[158]</div>
+          <div class="body">
+            <span class="authors">Galaxea Team</span><br />
+            <span class="ptitle">G0.5: One Autoregressive Stream for Reasoning and Action</span><br />
+            <span class="venue">Technical Report 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[157]</div>
+          <div class="body">
+            <span class="authors">Gen Li, Nan Wang, YunLong Li, Ziyang Yan, Yinghao Shuai, Saining Zhang, Shu Han, Shaocong Xu, Baijun Ye, Lu Zhang, Luan Zhang, Paul Barsch, Zebang Shen, Chaojian Li, <strong>Hang Zhao</strong>, Ya-Qin Zhang, Hao Zhao</span><br />
+            <span class="ptitle">Gen-NCAP: A Generative Simulator for Corner Case Benchmarking in End-to-End Autonomous Driving</span><br />
+            <span class="venue">IASEAI 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[156]</div>
+          <div class="body">
+            <span class="authors">Zongzheng Zhang, Zi Lin, Jiawen Yang, Ziqiao Peng, Junyan Lao, Lin Cheng, Huazhe Xu, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Automated Synthesis of Facial Mechanisms for Conversational Animatronic Robots</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[155]</div>
+          <div class="body">
+            <span class="authors">Junru Gu, Lijin Yang, Jianing Huang, Shu Liu, Zhongzhan Huang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Agent-driven Long-tail Simulation for Autonomous Driving</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[154]</div>
+          <div class="body">
+            <span class="authors">Ziwen Zhuang*, Shaoting Zhu*, Mengjie Zhao, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Deep Whole-body Parkour</span><br />
+            <span class="venue">In Submission</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[153]</div>
+          <div class="body">
+            <span class="authors">Weibang Wang, Kenan Li, Zhuoguang Chen, Yijun Yuan, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Complet4R: Geometric Complete 4D Reconstruction</span><br />
+            <span class="venue">CVPR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[152]</div>
+          <div class="body">
+            <span class="authors">Gu Zhang, Qicheng Xu, Haozhe Zhang, Jianhan Ma, Long He, Yiming Bao, Zeyu Ping, Zhecheng Yuan, Chenhao Lu, Chengbo Yuan, Tianhai Liang, Xiaoyu Tian, Maanping Shao, Feihong Zhang, Mingyu Ding, Yang Gao, Hao Zhao, <strong>Hang Zhao</strong>, Huazhe Xu</span><br />
+            <span class="ptitle">UniDex: A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos</span><br />
+            <span class="venue">CVPR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[151]</div>
+          <div class="body">
+            <span class="authors">Xiuyu Yang, Bohan Li, Shaocong Xu, Nan Wang, Chongjie Ye, Zhaoxi Chen, Minghan Qin, Yikang Ding, Zheng Zhu, Xin Jin, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">ORV: 4D Occupancy-centric Robot Video Generation</span><br />
+            <span class="venue">CVPR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[150]</div>
+          <div class="body">
+            <span class="authors">Tianyuan Yuan, Yicheng Liu, Chenhao Lu, Zixiang Chen, Tao Jiang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DepthVLA: Enhancing Vision-Language-Action Models with Depth-Aware Spatial Reasoning</span><br />
+            <span class="venue">ICRA 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[149]</div>
+          <div class="body">
+            <span class="authors">Tao Jiang, Tianyuan Yuan, Yicheng Liu, Chenhao Lu, Jianning Cui, Xiao Liu, Shuiqi Cheng, Jiyang Gao, Huazhe Xu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Galaxea Open-World Dataset and G0 Dual-System VLA Model</span><br />
+            <span class="venue">ICRA 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[148]</div>
+          <div class="body">
+            <span class="authors">Zongzheng Zhang, Jingrui Pang, Zhuo Yang, Kun Li, Minwen Liao, Saining Zhang, Guoxuan Chi, jinbang Guo, Huan-ang Gao, Modi Shi, Dongyun Ge, Yao Mu, Jiayuan Gu, Rui Chen, Hao Dong, Huazhe Xu, Li Yi, Yixin Zhu, <strong>Hang Zhao</strong>, Pengwei Wang, Shanghang Zhang, Guocai Yao, Jianyu Chen, Hongyang Li, Hao Zhao</span><br />
+            <span class="ptitle">Dexora: Open-Source VLA for High-DoF Bimanual Dexterity</span><br />
+            <span class="venue">ICRA 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[147]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Weicheng Zheng, Yixin Huang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Is Your Trajectory Displacement Safe in Long-tail?</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[146]</div>
+          <div class="body">
+            <span class="authors">Yicheng Liu, Shiduo Zhang, Zibin Dong, Baijun Ye, Tianyuan Yuan, Xiaopeng Yu, Linqi Yin, Chenhao Lu, Junhao Shi, Luca Jiang-Tao Yu, Liangtao Zheng, Tao Jiang, Jingjing Gong, Xipeng Qiu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">FASTer: Toward Efficient Autoregressive Vision Language Action Modeling via Neural Action Tokenization</span><br />
+            <span class="venue">ICLR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[145]</div>
+          <div class="body">
+            <span class="authors">Weicheng Zheng, Xiaofei Mao, Nanfei Ye, Pengxiang Li, Kun Zhan, XianPeng Lang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking</span><br />
+            <span class="venue">ICLR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[144]</div>
+          <div class="body">
+            <span class="authors">Jingzhe Shi, Qinwei Ma, Hongyi Liu, <strong>Hang Zhao</strong>, Jenq-Neng Hwang, Lei Li</span><br />
+            <span class="ptitle">Intrinsic Entropy of Context Length Scaling in LLMs</span><br />
+            <span class="venue">ICLR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[143]</div>
+          <div class="body">
+            <span class="authors">Pengxiang Li, Yilong Zheng, Yiming Wang, Haoyu Wang, <strong>Hang Zhao</strong>, Jun Liu, Xing Zhan, Kaicheng Zhan, Xiao Lang</span><br />
+            <span class="ptitle">Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving</span><br />
+            <span class="venue">ICLR 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[142]</div>
+          <div class="body">
+            <span class="authors">Weicheng Zheng, Yixin Huang, Qiao Sun, Derun Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DriveMA: Driving Vision-Language-Action Models with Verifiable Meta-Actions</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[141]</div>
+          <div class="body">
+            <span class="authors">Tianyuan Yuan, Zibin Dong, Yicheng Liu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Fast-WAM: Do World Action Models Need Test-time Future Imagination?</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[140]</div>
+          <div class="body">
+            <span class="authors">Zunzhe Zhang, Runhan Huang, Yicheng Liu, Shaoting Zhu, Linzhan Mou, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Generative Control as Optimization: Time Unconditional Flow Matching for Adaptive and Robust Robotic Control</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[139]</div>
+          <div class="body">
+            <span class="authors">Tianxing Zhou, Feiyang Xue, Zhangchen Ye, Tianyuan Yuan, <strong>Hang Zhao</strong>, Tao Jiang</span><br />
+            <span class="ptitle">VolumeDP: Modeling Volumetric Representation for Manipulation Policy Learning</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[138]</div>
+          <div class="body">
+            <span class="authors">Zibin Dong, Yicheng Liu, Shiduo Zhang, Baijun Ye, Yifu Yuan, Fei Ni, Jingjing Gong, Xipeng Qiu, <strong>Hang Zhao</strong>, Yinchuan Li, Jianye Hao</span><br />
+            <span class="ptitle">ActionCodec: What Makes for Good Action Tokenizers</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[137]</div>
+          <div class="body">
+            <span class="authors">Shaoting Zhu, Baijun Ye, Jiaxu Wang, Jiaqi Chen, Ziwen Zhuang, Linxin Mou, Runhan Huang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">TTT-Parkour: Rapid Test-Time Training for Perceptive Robot Parkour</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[136]</div>
+          <div class="body">
+            <span class="authors">Shaoting Zhu, Ziwen Zhuang, Mengjie Zhao, Kun-Ying Lee, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Hiking in the Wild: A Scalable Perceptive Parkour Framework for Humanoids</span><br />
+            <span class="venue">Preprint 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[135]</div>
+          <div class="body">
+            <span class="authors">Kai Xu, <strong>Hang Zhao</strong>, Ruizhen Hu, Yuhang Huang, Ziqiao Zhou, Wancheng Feng, Li Yi, Sida Peng, Xing Liu, Zihao Liu, Jin Zhang, Chenyang Zhu, Renjiao Yi, Qin Zou, Bo Du, Haibin Yu</span><br />
+            <span class="ptitle">From Specialist to Generalist: A Comprehensive Survey on World Models</span><br />
+            <span class="venue">TechRxiv 2026</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[134]</div>
+          <div class="body">
+            <span class="authors">Haohan Chi, Huan-ang Gao, Ziming Liu, Jianing Liu, Chenyu Liu, Jinwei Li, Kaisen Yang, Yangcheng Yu, Zeda Wang, Wenyi Li, Leichen Wang, Xingtao Hu, Hao Sun, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Impromptu VLA: Open Weights and Open Data for Driving Vision-Language-Action Models</span><br />
+            <span class="venue">NeurIPS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[133]</div>
+          <div class="body">
+            <span class="authors">Zibin Dong, Yicheng Liu, Yinchuan Li, <strong>Hang Zhao</strong>, Jianye Hao</span><br />
+            <span class="ptitle">Conditioning Matters: Training Diffusion Policies is Faster Than You Think</span><br />
+            <span class="venue">NeurIPS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[132]</div>
+          <div class="body">
+            <span class="authors">RoboCOIN Team</span><br />
+            <span class="ptitle">RoboCOIN: An Open-Sourced Bimanual Robotic Data Collection for Integrated Manipulation</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[131]</div>
+          <div class="body">
+            <span class="authors">Bowen Ye, Bin Zhang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DAP: A Discrete-token Autoregressive Planner for Autonomous Driving</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[130]</div>
+          <div class="body">
+            <span class="authors">Zhuoguang Chen, Minghui Qin, Tianyuan Yuan, Zhe Liu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">LONG3R: Long Sequence Streaming 3D Reconstruction</span><br />
+            <span class="venue">ICCV 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[129]</div>
+          <div class="body">
+            <span class="authors">Baijun Ye, Minghui Qin, Saining Zhang, Moonjun Gong, Shaoting Zhu, Hao Zhao, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">GS-Occ3D: Scaling Vision-only Occupancy Reconstruction for Autonomous Driving with Gaussian Splatting</span><br />
+            <span class="venue">ICCV 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[128]</div>
+          <div class="body">
+            <span class="authors">Ziwen Zhuang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Embrace Contacts: Humanoid Shadowing for Deployable Contact-Agnostics Motions</span><br />
+            <span class="venue">CoRL 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[127]</div>
+          <div class="body">
+            <span class="authors">Runhan Huang, Shaoting Zhu, Yilun Du, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">MoE-Loco: Mixture of Experts for Multitask Locomotion</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[126]</div>
+          <div class="body">
+            <span class="authors">Xin Duan, Ziwen Zhuang, <strong>Hang Zhao</strong>, Sören Schwertfeger</span><br />
+            <span class="ptitle">Playful DoggyBot: Learning Agile and Precise Quadrupedal Locomotion</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[125]</div>
+          <div class="body">
+            <span class="authors">Haoran Xu, Saining Zhang, Peishuo Li, Baijun Ye, Xiaoxue Chen, Huan-ang Gao, Jv Zheng, Xiaowei Song, Ziqiao Peng, Run Miao, Jia Jinrang, YIFENG SHI, Guangqi Yi, <strong>Hang Zhao</strong>, Hao Tang, Hongyang Li, Kaicheng Yu, Hao Zhao</span><br />
+            <span class="ptitle">CRUISE: Cooperative Reconstruction and Editing in V2X Scenarios Using Gaussian Splatting</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[124]</div>
+          <div class="body">
+            <span class="authors">Chengbo Yuan, Suraj Joshi, Shaoting Zhu, Hang Su, <strong>Hang Zhao</strong>, Yang Gao</span><br />
+            <span class="ptitle">RoboEngine: Plug-And-Play Robot Data Augmentation with Semantic Robot Segmentation and Background Generation</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[123]</div>
+          <div class="body">
+            <span class="authors">CYang Li, Zongzheng Zhang, Xuchong Qiu, Xinrun Li, Ziming Liu, LeiChen Wang, Ruikai Li, Zhenxin Zhu, Huan-ang Gao, Xiaojian Lin, Zhiyong Cui, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Reusing Attention for One-Stage Lane Topology Understanding</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[122]</div>
+          <div class="body">
+            <span class="authors">Zongzheng Zhang, Xuchong Qiu, Boran Zhang, Guantian Zheng, Xunjiang Gu, Guoxuan Chi, Huan-ang Gao, LeiChen Wang, Ziming Liu, Xinrun Li, Igor Gilitschenski, Hongyang Li, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Delving into Mapping Uncertainty for Mapless Trajectory Prediction</span><br />
+            <span class="venue">IROS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[121]</div>
+          <div class="body">
+            <span class="authors">Yijun Yuan, Zhuoguang Chen, Kenan Li, Weibang Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">SLAM-Former: Putting SLAM into One Transformer</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[120]</div>
+          <div class="body">
+            <span class="authors">Ruixun Liu, Lingyu Kong, Derun Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">OccVLA: Vision-Language-Action Model with Implicit 3D Occupancy Supervision</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[119]</div>
+          <div class="body">
+            <span class="authors">Zongzheng Zhang, Jiawen Yang, Ziqiao Peng, Meng Yang, Jianzhu Ma, Lin Cheng, Huazhe Xu, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Morpheus: A Neural-driven Animatronic Face with Hybrid Actuation and Diverse Emotion Control</span><br />
+            <span class="venue">RSS 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[118]</div>
+          <div class="body">
+            <span class="authors">Chuanhao Yan, Fengdi Che, Xuhan Huang, Xu Xu, Xin Li, Yizhi Li, Xingwei Qu, Jingzhe Shi, Chenghua Lin, Yaodong Yang, Binhang Yuan, <strong>Hang Zhao</strong>, Yu Qiao, Bowen Zhou, Jie Fu</span><br />
+            <span class="ptitle">Re:Form -- Reducing Human Annotations in Scalable Formal Software Verification with RL in LLMs: A Preliminary Study on Dafny</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[117]</div>
+          <div class="body">
+            <span class="authors">Anna Min, Ziyang Chen, <strong>Hang Zhao</strong>, Andrew Owens</span><br />
+            <span class="ptitle">Supervising Sound Localization Using In-the-wild Ego-motion</span><br />
+            <span class="venue">CVPR 2025 Spotlight</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[116]</div>
+          <div class="body">
+            <span class="authors">Zhuoguang Chen, Kenan Li, Xiuyu Yang, Tao Jiang, Yiming Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">TrackOcc: Camera-Based 4D Panoptic Occupancy Tracking</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[115]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Huimin Wang, Jiahao Zhan, Fan Nie, Xin Wen, Leimeng Xu, Kun Zhan, Peng Jia, Xianpeng Lang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Generalizing Motion Planners with Mixture of Experts for Autonomous Driving</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[114]</div>
+          <div class="body">
+            <span class="authors">Shaoting Zhu, Runhan Huang, Linzhan Mou, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Robust Robot Walker: Learning Agile Locomotion Over Tiny Traps</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[113]</div>
+          <div class="body">
+            <span class="authors">Shaoting Zhu, Derun Li, Linzhan Mou, Yong Liu, Ningyi Xu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">SARO: Space-Aware Robot System for Terrain Crossing via Vision-Language Model</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[112]</div>
+          <div class="body">
+            <span class="authors">Zongzheng Zhang, Xinrun Li, Sizhe Zou, Guoxuan Chi, Siqi Li, Xuchong Qiu, Guoliang Wang, Guantian Zheng, Leichen Wang, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Chameleon: Fast-Slow Neuro-Symbolic Lane Topology Extraction</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[111]</div>
+          <div class="body">
+            <span class="authors">Yunshen Wang, Yicheng Liu, Tianyuan Yuan, Yucheng Mao, Yingshi Liang, Xiuyu Yang, Honggang Zhang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Diffusion-Based Generative Models for 3D Occupancy Prediction in Autonomous Driving</span><br />
+            <span class="venue">ICRA 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[110]</div>
+          <div class="body">
+            <span class="authors">Shaoting Zhu, Linzhan Mou, Derun Li, Baijun Ye, Runhan Huang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">VR-Robo: A Real-to-Sim-to-Real Framework for Visual Robot Navigation and Locomotion</span><br />
+            <span class="venue">IEEE RA-L 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[109]</div>
+          <div class="body">
+            <span class="authors">Running Zhao, Luca Jiang-Tao Yu, Tingle Li, Zhihan Jiang, Chenwei Zhang, Chenshu Wu, <strong>Hang Zhao</strong>, Edith C.H. Ngai</span><br />
+            <span class="ptitle">SPACE: Speaker Adaptation for Acoustic Eavesdropping using mmWave Radio Signals</span><br />
+            <span class="venue">IEEE TMC 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[108]</div>
+          <div class="body">
+            <span class="authors">Zhiyuan Xu, Bohan Li, Huan-ang Gao, Mingju Gao, Yong Chen, Ming Liu, Chenxu Yan, <strong>Hang Zhao</strong>, Shuo Feng, Hao Zhao</span><br />
+            <span class="ptitle">Challenger: Affordable Adversarial Driving Video Generation</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[107]</div>
+          <div class="body">
+            <span class="authors">Derun Li, Changye Li, Yue Wang, Jianwei Ren, Xin Wen, Pengxiang Li, Leimeng Xu, Kun Zhan, Peng Jia, Xianpeng Lang, Ningyi Xu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Learning Personalized Driving Styles via Reinforcement Learning from Human Feedback</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[106]</div>
+          <div class="body">
+            <span class="authors">Jingzhe Shi, Qinwei Ma, Hongyi Liu, <strong>Hang Zhao</strong>, Jeng-Neng Hwang, Serge Belongie, Lei Li</span><br />
+            <span class="ptitle">Explaining Context Length Scaling and Bounds for Language Models</span><br />
+            <span class="venue">Preprint 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[105]</div>
+          <div class="body">
+            <span class="authors">Yunsheng Ma, Wenqian Ye, Can Cui, Haiming Zhang, Shuo Xing, Fucai Ke, Jinhong Wang, Chenglin Miao, Jintai Chen, Hamid Rezatofighi, Zhen Li, Guangtao Zheng, Chao Zheng, Tianjiao He, Manmohan Chandraker, Burhaneddin Yaman, Xin Ye, <strong>Hang Zhao</strong>, Xu Cao</span><br />
+            <span class="ptitle">Position: Prospective of Autonomous Driving — Multimodal LLMs, World Models, Embodied Intelligence</span><br />
+            <span class="venue">WACV 2025</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[104]</div>
+          <div class="body">
+            <span class="authors">Ziwen Zhuang, Shenzhe Yao, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Humanoid Parkour Learning</span><br />
+            <span class="venue">CoRL 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[103]</div>
+          <div class="body">
+            <span class="authors">Xiaoyu Tian*, Junru Gu*, Bailin Li*, Yicheng Liu*, Yang Wang, Zhiyong Zhao, Kun Zhan, Peng Jia, Xianpeng Lang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models</span><br />
+            <span class="venue">CoRL 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[102]</div>
+          <div class="body">
+            <span class="authors">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Uncertainty-Aware Decision Transformer for Stochastic Driving Environments</span><br />
+            <span class="venue">CoRL 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[101]</div>
+          <div class="body">
+            <span class="authors">Xinhao Liu, Moonjun Gong, Qi Fang, Haoyu Xie, Yiming Li, <strong>Hang Zhao</strong>, Chen Feng</span><br />
+            <span class="ptitle">LiDAR-Based 4D Occupancy Completion and Forecasting</span><br />
+            <span class="venue">IROS 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[100]</div>
+          <div class="body">
+            <span class="authors">Yiming Li*, Sihang Li*, Xinhao Liu*, Moonjun Gong*, Kenan Li, Nuo Chen, Zijun Wang, Zhiheng Li, Tao Jiang, Fisher Yu, Yue Wang, <strong>Hang Zhao</strong>, Zhiding Yu, Chen Feng</span><br />
+            <span class="ptitle">SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving</span><br />
+            <span class="venue">IROS 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[99]</div>
+          <div class="body">
+            <span class="authors">Tianyuan Yuan, Yucheng Mao, Jiawei Yang, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">PreSight: Enhancing Autonomous Vehicle Perception with City-Scale NeRF Priors</span><br />
+            <span class="venue">ECCV 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[98]</div>
+          <div class="body">
+            <span class="authors">Zhangchen Ye*, Tao Jiang*, Chenfeng Xu, Yiming Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">CVT-Occ: Cost Volume Temporal Fusion for 3D Occupancy Prediction</span><br />
+            <span class="venue">ECCV 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[97]</div>
+          <div class="body">
+            <span class="authors">Anna Min, Chenxu Hu, Yi Ren, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">A Unit-based System and Dataset for Expressive Direct Speech-to-Speech Translation</span><br />
+            <span class="venue">Interspeech 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[96]</div>
+          <div class="body">
+            <span class="authors">Zenan Li, Fan Nie, Qiao Sun, Fang Da, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Boosting Offline Reinforcement Learning for Autonomous Driving with Hierarchical Latent Skills</span><br />
+            <span class="venue">ICRA 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[95]</div>
+          <div class="body">
+            <span class="authors">Zhou Jiang, Zhenxin Zhu, Pengfei Li, Huan-ang Gao, Tianyuan Yuan, Yongliang Shi, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">P-MapNet: Far-seeing Map Generator Enhanced by both SDMap and HDMap Priors</span><br />
+            <span class="venue">IEEE RA-L 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[94]</div>
+          <div class="body">
+            <span class="authors">Wenyu Han, Congcong Wen, Lazarus Chok, Yan Liang Tan, Sheung Lung Chan, <strong>Hang Zhao</strong>, Chen Feng</span><br />
+            <span class="ptitle">Autoencoding Tree for City Generation and Applications</span><br />
+            <span class="venue">ISPRS Journal 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[93]</div>
+          <div class="body">
+            <span class="authors">Tianyuan Yuan, Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">StreamMapNet: Streaming Mapping Network for Vectorized Online HD Map Construction</span><br />
+            <span class="venue">WACV 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[92]</div>
+          <div class="body">
+            <span class="authors">Junsong Chen, Yue Wu, Simian Luo, Enze Xie, Sayak Paul, Ping Luo, <strong>Hang Zhao</strong>, Zhenguo Li</span><br />
+            <span class="ptitle">PixArt-δ: Fast and Controllable Image Generation with Latent Consistency Models</span><br />
+            <span class="venue">Preprint 2024</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[91]</div>
+          <div class="body">
+            <span class="authors">Simian Luo, Chuanhao Yan, Chenxu Hu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Diff-Foley: Synchronized Video-to-Audio Synthesis with Latent Diffusion Models</span><br />
+            <span class="venue">NeurIPS 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[90]</div>
+          <div class="body">
+            <span class="authors">Xiaoyu Tian*, Tao Jiang*, Longfei Yun, Yucheng Mao, Huitong Yang, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Occ3D: A Large-Scale 3D Occupancy Prediction Benchmark for Autonomous Driving</span><br />
+            <span class="venue">NeurIPS 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[89]</div>
+          <div class="body">
+            <span class="authors">Simian Luo, Yiqin Tan, Suraj Patil, Daniel Gu, Patrick von Platen, Apolinário Passos, Longbo Huang, Jian Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">LCM-LoRA: A Universal Stable-Diffusion Acceleration Module</span><br />
+            <span class="venue">Preprint 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[88]</div>
+          <div class="body">
+            <span class="authors">Simian Luo*, Yiqin Tan*, Longbo Huang&dagger;, Jian Li&dagger;, <strong>Hang Zhao</strong>&dagger;</span><br />
+            <span class="ptitle">Latent Consistency Models: Synthesizing High-Resolution Images With Few-Step Inference</span><br />
+            <span class="venue">Preprint</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[87]</div>
+          <div class="body">
+            <span class="authors">Ziwen Zhuang, Zipeng Fu, Jianren Wang, Christopher G. Atkeson, S&ouml;ren Schwertfeger, Chelsea Finn, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Robot Parkour Learning</span><br />
+            <span class="venue">CoRL 2023 Oral</span>
+            <span class="award">Best System Paper Finalist (Top 3)</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[86]</div>
+          <div class="body">
+            <span class="authors">Liangtao Zheng, Yicheng Liu, Yue Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Cross-dataset Sensor Alignment: Making Visual 3D Object Detector Generalize</span><br />
+            <span class="venue">CoRL 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[85]</div>
+          <div class="body">
+            <span class="authors">Tong Zhang, Yingdong Hu, Hanchen Cui, <strong>Hang Zhao</strong>, Yang Gao</span><br />
+            <span class="ptitle">A Universal Semantic-Geometric Representation for Robotic Manipulation</span><br />
+            <span class="venue">CoRL 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[84]</div>
+          <div class="body">
+            <span class="authors">Bowen Li, Ziyuan Huang, Junjie Ye, Yiming Li, Sebastian Scherer, <strong>Hang Zhao</strong>, Changhong Fu</span><br />
+            <span class="ptitle">PVT++: A Simple End-to-End Latency-Aware Visual Tracking Framework</span><br />
+            <span class="venue">ICCV 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[83]</div>
+          <div class="body">
+            <span class="authors">Zhijie Yan, et al.</span><br />
+            <span class="ptitle">INT2: Interactive Trajectory Prediction at Intersections</span><br />
+            <span class="venue">ICCV 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[82]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Xin Huang, Brian C. Williams, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">P4P: Conflict-Aware Motion Prediction for Planning in Autonomous Driving</span><br />
+            <span class="venue">IROS 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[81]</div>
+          <div class="body">
+            <span class="authors">Running Zhao*, Jiangtao Yu*, <strong>Hang Zhao</strong>†, Edith C.H. Ngai†</span><br />
+            <span class="ptitle">Radio2Text: Streaming Speech Recognition Using mmWave Radio Signals</span><br />
+            <span class="venue">UbiComp 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[80]</div>
+          <div class="body">
+            <span class="authors">Jiageng Mao, Yuxi Qian, Junjie Ye, <strong>Hang Zhao</strong>, Yue Wang</span><br />
+            <span class="ptitle">GPT-Driver: Learning to Drive with GPT</span><br />
+            <span class="venue">Preprint 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[79]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Shiduo Zhang, Danjiao Ma, Jingzhe Shi, Derun Li, Simian Luo, Yu Wang, Ningyi Xu, Guangzhi Cao, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Large Trajectory Models are Scalable Motion Predictors and Planners</span><br />
+            <span class="venue">Preprint 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[78]</div>
+          <div class="body">
+            <span class="authors">Chenxu Hu*, Jie Fu*&dagger;, Chenzhuang Du, Simian Luo, Junbo Zhao, <strong>Hang Zhao</strong>&dagger;</span><br />
+            <span class="ptitle">ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory</span><br />
+            <span class="venue">LLM@IJCAI 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[77]</div>
+          <div class="body">
+            <span class="authors">Yicheng Liu, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">VectorMapNet: End-to-end Vectorized HD Map Learning</span><br />
+            <span class="venue">ICML 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[76]</div>
+          <div class="body">
+            <span class="authors">Chenzhuang Du, Jiaye Teng, Tingle Li, Yichen Liu, Tianyuan Yuan, Yue Wang, Yang Yuan, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">On Uni-Modal Feature Learning in Supervised Multi-Modal Learning</span><br />
+            <span class="venue">ICML 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[75]</div>
+          <div class="body">
+            <span class="authors">Zhengxiao Han, Zhijie Yan, Yang Li, Pengfei Li, Yifeng Shi, Nairui Luo, Xu Gao, Yongliang Shi, Pengfei Huang, Jiangtao Gong, Guyue Zhou, Yilun Chen, <strong>Hang Zhao</strong>, Hao Zhao</span><br />
+            <span class="ptitle">Long-Term Interactive Driving Simulation: MPC to the Rescue</span><br />
+            <span class="venue">CICAI 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[74]</div>
+          <div class="body">
+            <span class="authors">Zitian Tang, Wenjie Ye, Wei-Chiu Ma, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">What Happened 3 Seconds Ago? Inferring the Past with Thermal Imaging</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[73]</div>
+          <div class="body">
+            <span class="authors">Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Neural Map Prior for Autonomous Driving</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[72]</div>
+          <div class="body">
+            <span class="authors">Junru Gu*, Chenxu Hu*, Tianyuan Zhang, Xuanyao Chen, Yilun Wang, Yue Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">ViP3D: End-to-end Visual Trajectory Prediction via 3D Agent Queries</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[71]</div>
+          <div class="body">
+            <span class="authors">Xiaoyu Tian, Haoxi Ran, Yue Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[70]</div>
+          <div class="body">
+            <span class="authors">Xuanyao Chen, Zhijian Liu, Haotian Tang, Li Yi, <strong>Hang Zhao</strong>, Song Han</span><br />
+            <span class="ptitle">SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[69]</div>
+          <div class="body">
+            <span class="authors">Xuanyao Chen, Tianyuan Zhang, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">FUTR3D: A Unified Sensor Fusion Framework for 3D Detection</span><br />
+            <span class="venue">CVPR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[68]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Zherong Pan, Yang Yu, Kai Xu</span><br />
+            <span class="ptitle">Learning Physically Realizable Skills for Online Packing of General 3D Shapes</span><br />
+            <span class="venue">ACM TOG 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[67]</div>
+          <div class="body">
+            <span class="authors">Yucheng Mao, Ruowen Zhao, Tianbao Zhang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">BEVScope: Enhancing Self-Supervised Depth Estimation Leveraging Bird's-Eye-View</span><br />
+            <span class="venue">Preprint 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[66]</div>
+          <div class="body">
+            <span class="authors">Zihui Xue, Zhengqi Gao, Sucheng Ren, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation</span><br />
+            <span class="venue">ICLR 2023 Oral</span>
+            <span class="award">Top 5%</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[65]</div>
+          <div class="body">
+            <span class="authors">Renhao Wang, Jiayuan Mao, Joy Hsu, <strong>Hang Zhao</strong>, Jiajun Wu, Yang Gao</span><br />
+            <span class="ptitle">Programmatically Grounded, Compositionally Generalizable Robotic Manipulation</span><br />
+            <span class="venue">ICLR 2023 Oral</span>
+            <span class="award">Top 25%</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[64]</div>
+          <div class="body">
+            <span class="authors">Tianyu Hua, Yonglong Tian, Sucheng Ren, Michalis Raptis, <strong>Hang Zhao</strong>, Leonid Sigal</span><br />
+            <span class="ptitle">Self-supervision through Random Segments with Autoregressive Coding (RandSAC)</span><br />
+            <span class="venue">ICLR 2023</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[63]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Xin Huang, Brian C. Williams, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">InterSim: Interactive Traffic Simulation via Explicit Relation Modeling</span><br />
+            <span class="venue">IROS 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[62]</div>
+          <div class="body">
+            <span class="authors">Renhao Wang, <strong>Hang Zhao</strong>, Yang Gao</span><br />
+            <span class="ptitle">CYBORGS: Contrastively Bootstrapping Object Representations by Grounding in Segmentation</span><br />
+            <span class="venue">ECCV 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[61]</div>
+          <div class="body">
+            <span class="authors">Tingle Li, Yichen Liu, Andrew Owens, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Learning Visual Styles from Audio-Visual Associations</span><br />
+            <span class="venue">ECCV 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[60]</div>
+          <div class="body">
+            <span class="authors">Running Zhao, Jiangtao Yu, Tingle Li, <strong>Hang Zhao</strong>, Edith Ngai</span><br />
+            <span class="ptitle">Radio2Speech: High Quality Speech Recovery from Radio Frequency Signals</span><br />
+            <span class="venue">INTERSPEECH 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[59]</div>
+          <div class="body">
+            <span class="authors">Zui Chen, Yansen Jing, Shengcheng Yuan, Yifei Xu, Jian Wu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Sound2Synth: Interpreting Sound via FM Synthesizer Parameters Estimation</span><br />
+            <span class="venue">IJCAI 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[58]</div>
+          <div class="body">
+            <span class="authors">Zehui Chen, Zhenyu Li, Shiquan Zhang, Liangji Fang, Qinghong Jiang, Feng Zhao, Bolei Zhou, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">AutoAlign: Pixel-Instance Feature Aggregation for Multi-Modal 3D Object Detection</span><br />
+            <span class="venue">IJCAI 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[57]</div>
+          <div class="body">
+            <span class="authors">Xin Huang, Xiaoyu Tian, Junru Gu, Qiao Sun, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">VectorFlow: Combining Images and Vectors for Traffic Occupancy and Flow Prediction</span><br />
+            <span class="venue">Preprint 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[56]</div>
+          <div class="body">
+            <span class="authors">Lingyu Zhu, Esa Rahtu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Beyond Visual Field of View: Perceiving 3D Environment with Echoes and Vision</span><br />
+            <span class="venue">Preprint 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[55]</div>
+          <div class="body">
+            <span class="authors">Zhengxi Liu, Qiao Tian, Chenxu Hu, Xudong Liu, Menglin Wu, Yuping Wang, <strong>Hang Zhao</strong>, Yuxuan Wang</span><br />
+            <span class="ptitle">Controllable and Lossless Non-autoregressive End-to-end Text-to-Speech</span><br />
+            <span class="venue">Preprint 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[54]</div>
+          <div class="body">
+            <span class="authors">Tianyuan Zhang, Xuanyao Chen, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">MUTR3D: A Multi-camera Tracking Framework via 3D-to-2D Queries</span><br />
+            <span class="venue">CVPRW 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[53]</div>
+          <div class="body">
+            <span class="authors">Qiao Sun, Xin Huang, Junru Gu, Brian C. Williams, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">M2I: From Factored Marginal Trajectory Prediction to Interactive Prediction</span><br />
+            <span class="venue">CVPR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[52]</div>
+          <div class="body">
+            <span class="authors">Sucheng Ren, Zhengqi Gao, Tianyu Hua, Zihui Xue, Yonglong Tian, Shengfeng He, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Co-advise: Cross Inductive Bias Distillation</span><br />
+            <span class="venue">CVPR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[51]</div>
+          <div class="body">
+            <span class="authors">Lue Fan, Ziqi Pang, Tianyuan Zhang, Yu-Xiong Wang, <strong>Hang Zhao</strong>, Feng Wang, Naiyan Wang, Zhaoxiang Zhang</span><br />
+            <span class="ptitle">Embracing Single Stride 3D Object Detector with Sparse Transformer</span><br />
+            <span class="venue">CVPR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[50]</div>
+          <div class="body">
+            <span class="authors">Yiming Li, Ziang Cao, Andrew Liang, Benjamin Liang, Luoyao Chen, <strong>Hang Zhao</strong>, Chen Feng</span><br />
+            <span class="ptitle">Egocentric Prediction of Action Target in 3D</span><br />
+            <span class="venue">CVPR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[49]</div>
+          <div class="body">
+            <span class="authors">Qi Li, Yue Wang, Yilun Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">HDMapNet: An Online HD Map Construction and Evaluation Framework</span><br />
+            <span class="venue">ICRA 2022</span>
+            <span class="award">CVPR 2021 Workshop Best Paper Nominee</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[48]</div>
+          <div class="body">
+            <span class="authors">Jianren Wang*, Ziwen Zhuang*, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">SEMI: Self-supervised Exploration via Multisensory Incongruity</span><br />
+            <span class="venue">ICRA 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[47]</div>
+          <div class="body">
+            <span class="authors">Longlong Jing, Ruichi Yu, Henrik Kretzschmar, Kang Li, Ruizhongtai Qi, <strong>Hang Zhao</strong>, Alper Ayvaci, Xu Chen, Dillon Cower, Yingwei Li, Yurong You, Han Deng, Congcong Li, Dragomir Anguelov</span><br />
+            <span class="ptitle">Depth Estimation Matters Most: Improving Per-Object Depth Estimation for Monocular 3D Detection and Tracking</span><br />
+            <span class="venue">ICRA 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[46]</div>
+          <div class="body">
+            <span class="authors">Yue Zhao, Chenzhuang Du, <strong>Hang Zhao</strong>, Tiejun Li</span><br />
+            <span class="ptitle">Intrinsically Motivated Self-supervised Learning in Reinforcement Learning</span><br />
+            <span class="venue">ICRA 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[45]</div>
+          <div class="body">
+            <span class="authors">Yingwei Li, Tiffany Chen, Maya Kabkab, Ruichi Yu, Longlong Jing, Yurong You, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">R4D: Utilizing Reference Objects for Long-Range Distance Estimation</span><br />
+            <span class="venue">ICLR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[44]</div>
+          <div class="body">
+            <span class="authors">Qi Li, Kaichun Mo, Yanchao Yang, <strong>Hang Zhao</strong>, Leonidas Guibas</span><br />
+            <span class="ptitle">IFR-Explore: Learning Inter-object Functional Relationships in 3D Indoor Scenes</span><br />
+            <span class="venue">ICLR 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[43]</div>
+          <div class="body">
+            <span class="authors">Zhengqi Gao, Sucheng Ren, Zihui Xue, Siting Li, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Training-free Robust Multimodal Learning via Sample-wise Jacobian Regularization</span><br />
+            <span class="venue">Preprint 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[42]</div>
+          <div class="body">
+            <span class="authors">Zhenyu Li, Zehui Chen, Ang Li, Liangji Fang, Qinhong Jiang, Xianming Liu, Junjun Jiang, Bolei Zhou, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations</span><br />
+            <span class="venue">AAAI 2022</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[41]</div>
+          <div class="body">
+            <span class="authors">Chenxu Hu, Qiao Tian, Tingle Li, Yuping Wang, Yuxuan Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Neural Dubber: Dubbing for Videos According to Scripts</span><br />
+            <span class="venue">NeurIPS 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[40]</div>
+          <div class="body">
+            <span class="authors">Yu Huang, Chenzhuang Du, Zihui Xue, Xuanyao Chen, <strong>Hang Zhao</strong>, Longbo Huang</span><br />
+            <span class="ptitle">What Makes Multi-Modal Learning Better than Single (Provably)</span><br />
+            <span class="venue">NeurIPS 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[39]</div>
+          <div class="body">
+            <span class="authors">Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang, <strong>Hang Zhao</strong>, Justin Solomon</span><br />
+            <span class="ptitle">DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries</span><br />
+            <span class="venue">CoRL 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[38]</div>
+          <div class="body">
+            <span class="authors">Jianren Wang, Ziwen Zhuang, Yuyang Wang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Adversarially Robust Imitation Learning</span><br />
+            <span class="venue">CoRL 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[37]</div>
+          <div class="body">
+            <span class="authors">Xiaosong Jia, Liting Sun, <strong>Hang Zhao</strong>, Masayoshi Tomizuka, Wei Zhan</span><br />
+            <span class="ptitle">Multi-Agent Trajectory Prediction by Combining Egocentric and Allocentric Views</span><br />
+            <span class="venue">CoRL 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[36]</div>
+          <div class="body">
+            <span class="authors">Tianyu Hua, Wenxiao Wang, Zihui Xue, Yue Wang, Sucheng Ren, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">On Feature Decorrelation in Self-Supervised Learning</span><br />
+            <span class="venue">ICCV 2021 Oral</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[35]</div>
+          <div class="body">
+            <span class="authors">Scott Ettinger, Shuyang Cheng, Benjamin Caine, Chenxi Liu, <strong>Hang Zhao</strong>, Sabeek Pradhan, Yuning Chai, Ben Sapp, Charles Qi, Yin Zhou, Zoey Yang, Aurelien Chouard, Pei Sun, Jiquan Ngiam, Vijay Vasudevan, Alexander McCauley, Jonathon Shlens, Dragomir Anguelov</span><br />
+            <span class="ptitle">Large Scale Interactive Motion Forecasting for Autonomous Driving: The Waymo Open Motion Dataset</span><br />
+            <span class="venue">ICCV 2021 Oral</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[34]</div>
+          <div class="body">
+            <span class="authors">Zihui Xue, Sucheng Ren, Zhengqi Gao, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">Multimodal Knowledge Expansion</span><br />
+            <span class="venue">ICCV 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[33]</div>
+          <div class="body">
+            <span class="authors">Junru Gu, Chen Sun, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DenseTNT: End-to-end Trajectory Prediction from Dense Goal Sets</span><br />
+            <span class="venue">ICCV 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[32]</div>
+          <div class="body">
+            <span class="authors">Tingle Li, Yichen Liu, Chenxu Hu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">CVC: Contrastive Learning for Non-parallel Voice Conversion</span><br />
+            <span class="venue">Interspeech 2021</span>
+            <span class="award">ISCA Travel Grant Award</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[31]</div>
+          <div class="body">
+            <span class="authors">Junru Gu, Qiao Sun, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">DenseTNT: Waymo Open Dataset Motion Prediction Challenge 1st Place Solution</span><br />
+            <span class="venue">CVPRW 2021</span>
+            <span class="award">Waymo Open Dataset Challenge Winner</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[30]</div>
+          <div class="body">
+            <span class="authors">Lu Mi, <strong>Hang Zhao</strong>, Charlie Nash, Xiaohan Jin, Jiyang Gao, Chen Sun, Cordelia Schmid, Nir Shavit, Yuning Chai, Dragomir Anguelov</span><br />
+            <span class="ptitle">HDMapGen: A Hierarchical Graph Generative Model of High Definition Maps</span><br />
+            <span class="venue">CVPR 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[29]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Yang Yu, Kai Xu</span><br />
+            <span class="ptitle">Learning Efficient Online 3D Bin Packing on Packing Configuration Trees</span><br />
+            <span class="venue">ICLR 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[28]</div>
+          <div class="body">
+            <span class="authors">Shuo Gao, Shuo Yan, <strong>Hang Zhao</strong>, Arokia Nathan</span><br />
+            <span class="ptitle">Touch-Based Human-Machine Interaction: Principles and Applications</span><br />
+            <span class="venue">Springer 2021</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[27]</div>
+          <div class="body">
+            <span class="authors">Chu Zhou, <strong>Hang Zhao</strong>, Jin Han, Chang Xu, Chao Xu, Tiejun Huang, Boxin Shi</span><br />
+            <span class="ptitle">UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging</span><br />
+            <span class="venue">NeurIPS 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[26]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>*, Jiyang Gao*, Tian Lan, Chen Sun, Benjamin Sapp, Balakrishnan Varadarajan, Yue Shen, Yi Shen, Yuning Chai, Cordelia Schmid, Congcong Li, Dragomir Anguelov</span><br />
+            <span class="ptitle">TNT: Target-driveN Trajectory Prediction</span><br />
+            <span class="venue">CoRL 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[25]</div>
+          <div class="body">
+            <span class="authors">Jianren Wang, Yujie Lu, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">CLOUD: Contrastive Learning of Unsupervised Dynamics</span><br />
+            <span class="venue">CoRL 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[24]</div>
+          <div class="body">
+            <span class="authors">Hanhan Li, Ariel Gordon, <strong>Hang Zhao</strong>, Vincent Casser, Anelia Angelova</span><br />
+            <span class="ptitle">Unsupervised Monocular Depth Learning in Dynamic Scenes</span><br />
+            <span class="venue">CoRL 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[23]</div>
+          <div class="body">
+            <span class="authors">Yunchao Wei, Shuai Zheng, Ming-Ming Cheng, <strong>Hang Zhao</strong>, Liwei Wang, Errui Ding, Yi Yang, Antonio Torralba, Ting Liu, Guolei Sun, Wenguan Wang, Luc Van Gool, Wonho Bae, Junhyug Noh, Jinhwan Seo, Gunhee Kim, Hao Zhao, Ming Lu, Anbang Yao, Yiwen Guo, Yurong Chen, Li Zhang, Chuangchuang Tan, Tao Ruan, Guanghua Gu, Shikui Wei, Yao Zhao, Mariia Dobko, Ostap Viniavskyi, Oles Dobosevych, Zhendong Wang, Zhenyuan Chen, Chen Gong, Huanqing Yan, Jun He</span><br />
+            <span class="ptitle">LID 2020: The Learning from Imperfect Data Challenge Results</span><br />
+            <span class="venue">Preprint 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[22]</div>
+          <div class="body">
+            <span class="authors">Jiyang Gao, Chen Sun, <strong>Hang Zhao</strong>, Yi Shen, Dragomir Anguelov, Congcong Li, Cordelia Schmid</span><br />
+            <span class="ptitle">VectorNet: Encoding HD Maps and Agent Dynamics from Vectorized Representation</span><br />
+            <span class="venue">CVPR 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[21]</div>
+          <div class="body">
+            <span class="authors">Pei Sun, Henrik Kretzschmar, Xerxes Dotiwalla, Aurelien Chouard, Vijaysai Patnaik, Paul Tsui, James Guo, Yin Zhou, Yuning Chai, Benjamin Caine, Vijay Vasudevan, Wei Han, Jiquan Ngiam, <strong>Hang Zhao</strong>, Aleksei Timofeev, Scott Ettinger, Maxim Krivokon, Amy Gao, Aditya Joshi, Sheng Zhao, Shuyang Cheng, Yu Zhang, Jonathon Shlens, Zhifeng Chen, Dragomir Anguelov</span><br />
+            <span class="ptitle">Scalability in Perception for Autonomous Driving: Waymo Open Dataset</span><br />
+            <span class="venue">CVPR 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[20]</div>
+          <div class="body">
+            <span class="authors">Chuang Gan, Deng Huang, <strong>Hang Zhao</strong>, Joshua B. Tenenbaum, Antonio Torralba</span><br />
+            <span class="ptitle">Music Gesture for Visual Sound Separation</span><br />
+            <span class="venue">CVPR 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[19]</div>
+          <div class="body">
+            <span class="authors">Jianren Wang, Zhaoyuan Fang, <strong>Hang Zhao</strong></span><br />
+            <span class="ptitle">AlignNet: A Unifying Approach to Audio-visual Alignment</span><br />
+            <span class="venue">WACV 2020</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[18]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Chuang Gan, Wei-Chiu Ma, Antonio Torralba</span><br />
+            <span class="ptitle">The Sound of Motions</span><br />
+            <span class="venue">ICCV 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[17]</div>
+          <div class="body">
+            <span class="authors">Chuang Gan, <strong>Hang Zhao</strong>, Peihao Chen, David Cox, Antonio Torralba</span><br />
+            <span class="ptitle">Self-supervised Moving Vehicle Tracking with Stereo Sound</span><br />
+            <span class="venue">ICCV 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[16]</div>
+          <div class="body">
+            <span class="authors">Mingmin Zhao, Yingcheng Liu, Aniruddh Raghu, <strong>Hang Zhao</strong>, Tianhong Li, Antonio Torralba, Dina Katabi</span><br />
+            <span class="ptitle">Through-Wall Human Mesh Recovery Using Radio Signals</span><br />
+            <span class="venue">ICCV 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[15]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Zhicheng Yan, Lorenzo Torresani, Antonio Torralba</span><br />
+            <span class="ptitle">HACS: Human Action Clips and Segments Dataset for Recognition and Temporal Localization</span><br />
+            <span class="venue">ICCV 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[14]</div>
+          <div class="body">
+            <span class="authors">Andrew Rouditchenko, <strong>Hang Zhao</strong>, Chuang Gan, Josh McDermott, Antonio Torralba</span><br />
+            <span class="ptitle">Self-Supervised Segmentation and Source Separation on Videos</span><br />
+            <span class="venue">CVPRW 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[13]</div>
+          <div class="body">
+            <span class="authors">Andrew Rouditchenko*, <strong>Hang Zhao</strong>*, Chuang Gan, Josh McDermott, Antonio Torralba</span><br />
+            <span class="ptitle">Self-Supervised Audio-visual Co-segmentation</span><br />
+            <span class="venue">ICASSP 2019</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[12]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Chuang Gan, Andrew Rouditchenko, Carl Vondrick, Josh McDermott, Antonio Torralba</span><br />
+            <span class="ptitle">The Sound of Pixels</span><br />
+            <span class="venue">ECCV 2018</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[11]</div>
+          <div class="body">
+            <span class="authors">Mingmin Zhao, Yonglong Tian, <strong>Hang Zhao</strong>, Mohammad Alsheikh, Tianhong Li, Rumen Hristov, Zachary Kabelac, Dina Katabi, Antonio Torralba</span><br />
+            <span class="ptitle">RF-Based 3D Skeletons</span><br />
+            <span class="venue">SIGCOMM 2018</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[10]</div>
+          <div class="body">
+            <span class="authors">Mingmin Zhao, Tianhong Li, Mohammad Alsheikh, Yonglong Tian, <strong>Hang Zhao</strong>, Antonio Torralba, Dina Katabi</span><br />
+            <span class="ptitle">Through-Wall Human Pose Estimation Using Radio Signals</span><br />
+            <span class="venue">CVPR 2018</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[9]</div>
+          <div class="body">
+            <span class="authors">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Tete Xiao, Sanja Fidler, Adela Barriuso, Antonio Torralba</span><br />
+            <span class="ptitle">Semantic Understanding of Scenes through the ADE20K Dataset</span><br />
+            <span class="venue">IJCV 2018</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[8]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Xavier Puig, Bolei Zhou, Sanja Fidler, Antonio Torralba</span><br />
+            <span class="ptitle">Open Vocabulary Scene Parsing</span><br />
+            <span class="venue">ICCV 2017</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[7]</div>
+          <div class="body">
+            <span class="authors">Bolei Zhou, <strong>Hang Zhao</strong>, Xavier Puig, Sanja Fidler, Adela Barriuso, Antonio Torralba</span><br />
+            <span class="ptitle">Scene Parsing through ADE20K Dataset</span><br />
+            <span class="venue">CVPR 2017</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[6]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Orazio Gallo, Iuri Frosio, Jan Kautz</span><br />
+            <span class="ptitle">Loss Functions for Neural Networks for Image Processing</span><br />
+            <span class="venue">IEEE TCI 2017</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[5]</div>
+          <div class="body">
+            <span class="authors">Liam Paul, et al.</span><br />
+            <span class="ptitle">Duckietown: an Open, Inexpensive and Flexible Platform for Autonomy Education and Research</span><br />
+            <span class="venue">ICRA 2017</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[4]</div>
+          <div class="body">
+            <span class="authors">Christy Fernandez-Cull, <strong>Hang Zhao</strong>, Boxin Shi, Brian M. Tyrrell, Joseph Lin, Ramesh Raskar</span><br />
+            <span class="ptitle">Snapshot on-chip HDR ROIC architectures</span><br />
+            <span class="venue">COSI 2015</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[3]</div>
+          <div class="body">
+            <span class="authors">Achuta Kadambi, <strong>Hang Zhao</strong>, Boxin Shi, Ramesh Raskar</span><br />
+            <span class="ptitle">Occluded imaging with time of flight sensors</span><br />
+            <span class="venue">ACM TOG 2015</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[2]</div>
+          <div class="body">
+            <span class="authors"><strong>Hang Zhao</strong>, Boxin Shi, Christy Fernandez-Cull, Sai-Kit Yeung, Ramesh Raskar</span><br />
+            <span class="ptitle">Unbounded High Dynamic Range Photography using a Modulo Camera</span><br />
+            <span class="venue">ICCP 2015</span>
+            <span class="award">Best Paper Runner-up</span>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="num">[1]</div>
+          <div class="body">
+            <span class="authors">Boxin Shi, <strong>Hang Zhao</strong>, Moshe Ben-Ezra, Sai-Kit Yeung, Christy Fernandez-Cull, R. Hamilton Shepard, Christopher Barsi, Ramesh Raskar</span><br />
+            <span class="ptitle">Sub-pixel layout for super-resolution with images in an octic group</span><br />
+            <span class="venue">ECCV 2014</span>
+          </div>
+        </div>
       </section>
 
     </main>
